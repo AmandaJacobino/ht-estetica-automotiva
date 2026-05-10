@@ -1,0 +1,132 @@
+import { Ico } from '../ui/Icons';
+import { waLink } from '../../lib/whatsapp';
+
+/** Brand logo mark + wordmark */
+function Logo({ size = 15 }: { size?: number }) {
+  return (
+    <div className="logo">
+      <div className="logo-mark">HT</div>
+      <div className="logo-text" style={{ fontSize: size }}>
+        <span className="or">HT</span>{' '}
+        <span className="bl">Estética</span>{' '}
+        <span className="or">Automotiva</span>
+      </div>
+    </div>
+  );
+}
+
+const NAV_LINKS = [
+  { href: '#inicio', label: 'Início' },
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#depoimentos', label: 'Depoimentos' },
+  { href: '#faq', label: 'FAQ' },
+  { href: '#contato', label: 'Contato' },
+];
+
+interface MobileMenuProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+/** Full-screen mobile navigation overlay */
+function MobileMenu({ open, onClose }: MobileMenuProps) {
+  return (
+    <div className={`mobile-menu ${open ? 'open' : ''}`}>
+      {NAV_LINKS.map((l) => (
+        <a key={l.href} href={l.href} onClick={onClose}>
+          {l.label}
+        </a>
+      ))}
+      <div style={{ marginTop: 24 }}>
+        <a
+          href={waLink()}
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-primary"
+          style={{ width: '100%', justifyContent: 'center' }}
+        >
+          <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar Orçamento
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/** Sticky top navigation bar with desktop links and mobile burger menu */
+export function Nav() {
+  const [open, setOpen] = React.useState(false);
+  const [active, setActive] = React.useState<string>('inicio');
+
+  React.useEffect(() => {
+    const ids = NAV_LINKS.map((l) => l.href.slice(1));
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+    if (sections.length === 0) return;
+
+    const visible = new Map<string, number>();
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) visible.set(e.target.id, e.intersectionRatio);
+          else visible.delete(e.target.id);
+        }
+        if (visible.size > 0) {
+          const top = [...visible.entries()].sort((a, b) => b[1] - a[1])[0][0];
+          setActive(top);
+        }
+      },
+      { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
+    );
+
+    sections.forEach((s) => io.observe(s));
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <>
+      <nav className="nav">
+        <div className="container nav-inner">
+          <Logo />
+          <div className="nav-links">
+            {NAV_LINKS.map((l) => {
+              const id = l.href.slice(1);
+              const isActive = id === active;
+              return (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className={`nav-link${isActive ? ' active' : ''}`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {l.label}
+                </a>
+              );
+            })}
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-cta"
+            >
+              <Ico.Whats style={{ width: 14, height: 14 }} /> Orçamento
+            </a>
+          </div>
+          <button
+            id="nav-burger"
+            className="burger"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Abrir menu"
+          >
+            {open ? <Ico.Close /> : <Ico.Menu />}
+          </button>
+        </div>
+      </nav>
+      <MobileMenu open={open} onClose={() => setOpen(false)} />
+    </>
+  );
+}
+
+// React needs to be in scope for JSX in older setups; import it explicitly.
+import React from 'react';
