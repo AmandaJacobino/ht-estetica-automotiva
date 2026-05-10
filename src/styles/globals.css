@@ -26,6 +26,10 @@
   --green: #22c55e;
   --star: url(#starGrad);
   --star-color: #F25C05;
+  --title-font: 'Teko';
+  --title-tracking: .02em;
+  --title-case: none;
+  --atmos-opacity: 0;
 }
 
 * {
@@ -232,7 +236,8 @@ section {
   border-radius: 999px;
   font-size: 13.5px;
   color: var(--fg-dim);
-  transition: color .25s ease, background .25s ease;
+  transition: color .25s ease, background-color .25s ease;
+  background-color: transparent;
   font-weight: 500;
   letter-spacing: .02em;
 }
@@ -375,22 +380,41 @@ section {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 56px;
   align-items: center;
+  text-align: center;
+  gap: 24px;
   margin-top: 28px
 }
 
 @media (max-width:960px) {
   .hero-content {
-    gap: 36px
+    gap: 20px
   }
+}
+
+/* Video container — sits right above the title */
+.hero-video {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16/9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--bg-2), var(--bg-1));
+  border: 1px solid var(--line-strong);
+  margin-bottom: 8px
 }
 
 .h1 {
   font-size: clamp(44px, 6.5vw, 88px);
   line-height: .95;
-  margin: 18px 0 18px;
+  text-align: center;
+  margin: 0;
   letter-spacing: -.02em;
+}
+
+.h1-bang {
+  display: inline-block;
+  width: .3em
 }
 
 .h1 .accent {
@@ -413,15 +437,17 @@ section {
   text-align: center;
   font-size: 18px;
   color: var(--fg-dim);
-  max-width: 520px;
-  margin: 0 0 28px;
+  max-width: 600px;
+  margin: 8px auto 0;
   line-height: 1.55;
 }
 
 .hero-ctas {
   display: flex;
+  justify-content: center;
   gap: 12px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  margin-top: 8px
 }
 
 .btn {
@@ -432,7 +458,8 @@ section {
   border-radius: 999px;
   font-weight: 600;
   font-size: 15px;
-  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease;
+  background-color: transparent;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -1736,14 +1763,14 @@ footer {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, .6);
   backdrop-filter: blur(12px);
   border: 1px solid var(--line-strong);
   color: #fff;
   display: grid;
   place-items: center;
   cursor: pointer;
-  transition: background .2s ease, border-color .2s ease, transform .15s ease;
+  transition: background-color .2s ease, border-color .2s ease, transform .15s ease;
 }
 
 .ba-nav:hover {
@@ -1828,69 +1855,6 @@ footer {
   letter-spacing: .1em;
 }
 
-/* Tweaks panel */
-.tweaks {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 70;
-  width: 300px;
-  max-height: calc(100vh - 48px);
-  overflow: auto;
-  background: rgba(15, 15, 18, .96);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--line-strong);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .8);
-  display: none;
-}
-
-.tweaks.on {
-  display: block
-}
-
-.tweaks h4 {
-  margin: 0 0 14px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 13px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--orange)
-}
-
-.tweaks label {
-  display: block;
-  font-size: 11px;
-  color: var(--fg-mute);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin: 14px 0 8px
-}
-
-.tweak-opts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px
-}
-
-.tweak-opts button {
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, .04);
-  border: 1px solid var(--line);
-  color: var(--fg-dim);
-  text-align: left;
-  transition: all .15s ease;
-}
-
-.tweak-opts button.on {
-  background: rgba(242, 92, 5, .15);
-  border-color: var(--orange);
-  color: var(--fg)
-}
 
 /* Utility reveal staggering */
 .stagger>* {
