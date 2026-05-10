@@ -26,6 +26,10 @@
   --green: #22c55e;
   --star: url(#starGrad);
   --star-color: #F25C05;
+  --title-font: 'Teko';
+  --title-tracking: .02em;
+  --title-case: none;
+  --atmos-opacity: 0;
 }
 
 * {
@@ -1851,69 +1855,6 @@ footer {
   letter-spacing: .1em;
 }
 
-/* Tweaks panel */
-.tweaks {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 70;
-  width: 300px;
-  max-height: calc(100vh - 48px);
-  overflow: auto;
-  background: rgba(15, 15, 18, .96);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--line-strong);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .8);
-  display: none;
-}
-
-.tweaks.on {
-  display: block
-}
-
-.tweaks h4 {
-  margin: 0 0 14px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 13px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--orange)
-}
-
-.tweaks label {
-  display: block;
-  font-size: 11px;
-  color: var(--fg-mute);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin: 14px 0 8px
-}
-
-.tweak-opts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px
-}
-
-.tweak-opts button {
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, .04);
-  border: 1px solid var(--line);
-  color: var(--fg-dim);
-  text-align: left;
-  transition: all .15s ease;
-}
-
-.tweak-opts button.on {
-  background: rgba(242, 92, 5, .15);
-  border-color: var(--orange);
-  color: var(--fg)
-}
 
 /* Utility reveal staggering */
 .stagger>* {

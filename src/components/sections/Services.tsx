@@ -73,4 +73,3 @@ export function Services() {
   );
 }
 
-import React from 'react';
