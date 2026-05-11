@@ -751,6 +751,16 @@ section {
   line-height: 1.55
 }
 
+/* Services section header centering */
+.services-intro {
+  text-align: center;
+}
+
+.services-intro .sec-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Services grid */
 .services {
   display: grid;
