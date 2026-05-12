@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Ico } from '../ui/Icons';
 
 interface FaqItem {
@@ -51,18 +52,30 @@ export function Faq() {
 
         <div className="faq reveal">
           {FAQ_ITEMS.map((it) => (
-            <details className="faq-item" key={it.question}>
-              <summary className="faq-q">
-                <span>{it.question}</span>
-                <span className="faq-plus">
-                  <Ico.Plus />
-                </span>
-              </summary>
-              <div className="faq-a">{it.answer}</div>
-            </details>
+            <FaqCard key={it.question} it={it} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function FaqCard({ it }: { it: FaqItem }) {
+  const [open, setOpen] = useState(false);
+  
+  return (
+    <div className={`faq-item ${open ? 'open' : ''}`}>
+      <div className="faq-q" onClick={() => setOpen(!open)}>
+        <span>{it.question}</span>
+        <span className="faq-plus">
+          <Ico.Plus />
+        </span>
+      </div>
+      <div className="faq-a-wrapper">
+        <div className="faq-a-content">
+          <div className="faq-a">{it.answer}</div>
+        </div>
+      </div>
+    </div>
   );
 }
