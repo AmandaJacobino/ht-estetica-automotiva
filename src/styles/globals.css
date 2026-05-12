@@ -853,7 +853,8 @@ section {
   color: var(--fg-dim);
   font-size: 14px;
   line-height: 1.55;
-  margin: 0
+  margin: 0;
+  text-align: justify;
 }
 
 .svc-line {
@@ -1209,7 +1210,8 @@ section {
   margin: 0 0 20px;
   font-size: 15px;
   line-height: 1.55;
-  color: var(--fg)
+  color: var(--fg);
+  text-align: justify;
 }
 
 .testi-who {
@@ -1315,11 +1317,32 @@ section {
 }
 
 .faq-a {
-  padding: 0 24px 22px;
+  padding: 0 24px 0;
   color: var(--fg-dim);
   font-size: 15px;
   line-height: 1.65;
-  max-width: 680px
+  max-width: 680px;
+  text-align: justify;
+}
+
+.faq-item[open] .faq-a {
+  animation: faqSlideDown 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+  overflow: hidden;
+}
+
+@keyframes faqSlideDown {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    padding-bottom: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 22px;
+    transform: translateY(0);
+  }
 }
 
 .contact-single {
