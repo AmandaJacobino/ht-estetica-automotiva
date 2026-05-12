@@ -36,7 +36,13 @@ export function About() {
                 </div>
               </div>
               <div className="cert-card">
-                <div className="cert-img" />
+                <div className="cert-img-wrapper">
+                  <img
+                    src="https://placehold.co/400x300/2a1810/F25C05?text=Certificado+Profissional"
+                    alt="Certificado Profissional"
+                    className="cert-img-element"
+                  />
+                </div>
                 <div className="cert-label">Certificado Profissional</div>
               </div>
             </div>
@@ -48,20 +54,22 @@ export function About() {
             <h2 className="title-font">
               Mais do que polir, é <span className="o">restaurar a história</span>.
             </h2>
-            <p>
-              Meu nome é <b>Henrique</b>, eu fundei este serviço movido por uma paixão genuína por
-              automóveis e um respeito profundo pelo trabalho bem feito.
-            </p>
-            <p>
-              O seu veículo é muito mais que um meio de transporte —{' '}
-              <b>ele é testemunha das suas conquistas</b>. Por isso, meu compromisso não é
-              simplesmente em polir, mas honrar essa história com o cuidado que ela merece.
-            </p>
-            <p>
-              Mesmo sendo novo no mercado, trago algo que vale mais que anos de experiência:{' '}
-              <span className="hi"> dedicação minuciosa</span> e{' '}
-              <span className="hi">honestidade total</span> com cada cliente.
-            </p>
+            <div className="about-text">
+              <p>
+                Meu nome é <b>Henrique</b>, eu fundei este serviço movido por uma paixão genuína por
+                automóveis e um respeito profundo pelo trabalho bem feito.
+              </p>
+              <p>
+                O seu veículo é muito mais que um meio de transporte —{' '}
+                <b>ele é testemunha das suas conquistas</b>. Por isso, meu compromisso não é
+                simplesmente em polir, mas honrar essa história com o cuidado que ela merece.
+              </p>
+              <p>
+                Mesmo sendo novo no mercado, trago algo que vale mais que anos de experiência:{' '}
+                <span className="hi"> dedicação minuciosa</span> e{' '}
+                <span className="hi">honestidade total</span> com cada cliente.
+              </p>
+            </div>
             <div className="about-quote">
               Aqui, o seu carro não é "mais um". Ele é o mais importante.
             </div>
