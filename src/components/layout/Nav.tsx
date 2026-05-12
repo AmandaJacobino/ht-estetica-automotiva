@@ -1,20 +1,6 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
-/** Brand logo mark + wordmark */
-function Logo({ size = 15 }: { size?: number }) {
-  return (
-    <div className="logo">
-      <div className="logo-mark">HT</div>
-      <div className="logo-text" style={{ fontSize: size }}>
-        <span className="or">HT</span>{' '}
-        <span className="bl">Estética</span>{' '}
-        <span className="or">Automotiva</span>
-      </div>
-    </div>
-  );
-}
-
 const NAV_LINKS = [
   { href: '#inicio', label: 'Início' },
   { href: '#sobre', label: 'Sobre' },
@@ -88,7 +74,13 @@ export function Nav() {
     <>
       <nav className="nav">
         <div className="container nav-inner">
-          <Logo />
+          <div className="logo">
+            <div className="logo-text" style={{ fontSize: 15 }}>
+              <span className="or">HT</span>{' '}
+              <span className="bl">Estética</span>{' '}
+              <span className="or">Automotiva</span>
+            </div>
+          </div>
           <div className="nav-links">
             {NAV_LINKS.map((l) => {
               const id = l.href.slice(1);
