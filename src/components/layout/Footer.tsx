@@ -40,6 +40,8 @@ export function Footer() {
               <li><a href="#inicio">Início</a></li>
               <li><a href="#sobre">Sobre</a></li>
               <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#faq">FAQ</a></li>
               <li><a href="#contato">Contato</a></li>
             </ul>
           </div>
