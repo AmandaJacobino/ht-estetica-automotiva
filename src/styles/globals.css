@@ -747,7 +747,7 @@ section {
 .sec-sub {
   color: var(--fg-dim);
   font-size: 17px;
-  max-width: 640px;
+  max-width: 720px;
   line-height: 1.55
 }
 
