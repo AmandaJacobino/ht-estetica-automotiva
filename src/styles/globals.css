@@ -1551,14 +1551,15 @@ footer {
 }
 
 .foot-brand .bl {
-  color: #60a5fa
+  color: #ffffff
 }
 
 .foot-desc {
   color: var(--fg-dim);
   font-size: 13.5px;
   line-height: 1.6;
-  max-width: 280px
+  max-width: 280px;
+  text-align: justify;
 }
 
 .foot-socials {
