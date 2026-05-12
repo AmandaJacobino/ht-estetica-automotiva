@@ -43,7 +43,7 @@ export function Services() {
   return (
     <section className="section" id="processo">
       <div className="container">
-        <div className="reveal">
+        <div className="reveal services-intro">
           <div className="sec-eyebrow">Nosso processo</div>
           <h2 className="sec-title title-font">
             Não se trata apenas de limpar,<br />

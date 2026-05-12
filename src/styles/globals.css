@@ -751,6 +751,16 @@ section {
   line-height: 1.55
 }
 
+/* Services section header centering */
+.services-intro {
+  text-align: center;
+}
+
+.services-intro .sec-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Services grid */
 .services {
   display: grid;
@@ -843,7 +853,8 @@ section {
   color: var(--fg-dim);
   font-size: 14px;
   line-height: 1.55;
-  margin: 0
+  margin: 0;
+  text-align: justify;
 }
 
 .svc-line {
@@ -919,44 +930,26 @@ section {
   transform: rotate(-4deg);
 }
 
-.cert-card .cert-img {
+.cert-card .cert-img-wrapper {
+  width: 100%;
   height: 110px;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, #2a1810 0%, #4a2818 50%, #2a1810 100%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, .04) 0 4px, transparent 4px 8px);
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(242, 92, 5, .2);
-  position: relative;
   overflow: hidden;
+  border: 1px solid rgba(242, 92, 5, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-1);
 }
 
-.cert-card .cert-img::before {
-  content: "CERTIFICADO";
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 800;
-  font-size: 11px;
-  letter-spacing: .22em;
-  color: var(--orange);
+.cert-card .cert-img-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.cert-card .cert-img::after {
-  content: "FULLPOWER PRO";
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-size: 14px;
-  letter-spacing: .06em;
-  color: #fff;
-  text-shadow: 0 0 12px rgba(242, 92, 5, .6);
+.about-text p {
+  text-align: justify;
 }
 
 .cert-card .cert-label {
@@ -1217,7 +1210,8 @@ section {
   margin: 0 0 20px;
   font-size: 15px;
   line-height: 1.55;
-  color: var(--fg)
+  color: var(--fg);
+  text-align: justify;
 }
 
 .testi-who {
@@ -1277,7 +1271,7 @@ section {
   transition: border-color .2s ease;
 }
 
-.faq-item[open] {
+.faq-item.open {
   border-color: rgba(242, 92, 5, .3)
 }
 
@@ -1310,7 +1304,7 @@ section {
   transition: transform .3s ease, background .2s ease;
 }
 
-.faq-item[open] .faq-plus {
+.faq-item.open .faq-plus {
   transform: rotate(45deg);
   background: var(--orange);
   color: #fff;
@@ -1322,12 +1316,36 @@ section {
   height: 16px
 }
 
+.faq-a-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.faq-item.open .faq-a-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-a-content {
+  overflow: hidden;
+}
+
 .faq-a {
   padding: 0 24px 22px;
   color: var(--fg-dim);
   font-size: 15px;
   line-height: 1.65;
-  max-width: 680px
+  max-width: 680px;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.faq-item.open .faq-a {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) 0.1s, transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) 0.1s;
 }
 
 .contact-single {
