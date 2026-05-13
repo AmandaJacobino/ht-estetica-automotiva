@@ -45,6 +45,50 @@
   -webkit-tap-highlight-color: transparent
 }
 
+/* Global focus-visible ring — visible only for keyboard navigation */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Rounded interactive elements get a rounder outline */
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+.btn-whats:focus-visible,
+.nav-cta:focus-visible,
+.nav-link:focus-visible,
+.wash-btn:focus-visible,
+.ba-nav:focus-visible,
+.ba-dot:focus-visible,
+.float-wa:focus-visible,
+.foot-socials a:focus-visible {
+  outline-offset: 4px;
+  border-radius: 999px;
+}
+
+.faq-q:focus-visible {
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 html,
 body {
   margin: 0;
