@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Ico } from '../ui/Icons';
+import { SectionHeader } from '../ui/SectionHeader';
 
 interface FaqItem {
   question: string;
@@ -38,17 +39,11 @@ export function Faq() {
   return (
     <section className="section" id="faq">
       <div className="container">
-        <div className="reveal text-center">
-          <div className="sec-eyebrow inline-flex justify-center">
-            Perguntas
-          </div>
-          <h2 className="sec-title title-font">
-            <span className="o">Dúvidas</span> Frequentes
-          </h2>
-          <p className="sec-sub mx-auto">
-            Tire suas principais dúvidas antes mesmo de pedir orçamento.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Perguntas"
+          title={<><span className="o">Dúvidas</span> Frequentes</>}
+          subtitle="Tire suas principais dúvidas antes mesmo de pedir orçamento."
+        />
 
         <div className="faq reveal">
           {FAQ_ITEMS.map((it, i) => (

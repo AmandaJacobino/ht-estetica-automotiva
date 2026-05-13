@@ -1,4 +1,5 @@
 import { Ico } from '../ui/Icons';
+import { SectionHeader } from '../ui/SectionHeader';
 
 interface Testimonial {
   name: string;
@@ -20,17 +21,11 @@ export function Testimonials() {
   return (
     <section className="section" id="depoimentos">
       <div className="container">
-        <div className="reveal text-center">
-          <div className="sec-eyebrow inline-flex justify-center">
-            Depoimentos
-          </div>
-          <h2 className="sec-title title-font">
-            O que nossos <span className="o">clientes dizem</span>
-          </h2>
-          <p className="sec-sub mx-auto">
-            Avaliações reais de quem já confiou o carro com a gente.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Depoimentos"
+          title={<>O que nossos <span className="o">clientes dizem</span></>}
+          subtitle="Avaliações reais de quem já confiou o carro com a gente."
+        />
 
         <div className="testis reveal">
           {TESTIMONIALS.map((t) => (

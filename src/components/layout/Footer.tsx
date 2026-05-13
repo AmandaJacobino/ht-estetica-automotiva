@@ -1,5 +1,6 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
+import { NAV_LINKS } from './Nav';
 
 /** Site footer with brand, navigation columns and social links */
 export function Footer() {
@@ -37,12 +38,9 @@ export function Footer() {
           <div className="foot">
             <h3>Navegação</h3>
             <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#depoimentos">Depoimentos</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contato">Contato</a></li>
+              {NAV_LINKS.map((l) => (
+                <li key={l.href}><a href={l.href}>{l.label}</a></li>
+              ))}
             </ul>
           </div>
 

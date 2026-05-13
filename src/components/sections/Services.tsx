@@ -1,5 +1,6 @@
 import { Ico } from '../ui/Icons';
 import { BeforeAfter } from './BeforeAfter';
+import { SectionHeader } from '../ui/SectionHeader';
 
 interface ServiceItem {
   n: string;
@@ -43,17 +44,13 @@ export function Services() {
   return (
     <section className="section" id="processo">
       <div className="container">
-        <div className="reveal services-intro">
-          <div className="sec-eyebrow">Nosso processo</div>
-          <h2 className="sec-title title-font">
-            Não se trata apenas de limpar,<br />
-            mas de <span className="o">restaurar e proteger</span>.
-          </h2>
-          <p className="sec-sub">
-            Utilizamos produtos e técnicas de ponta para um resultado superior e duradouro.
-            Cada etapa é executada com atenção e paciência.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Nosso processo"
+          align="left"
+          className="services-intro"
+          title={<>Não se trata apenas de limpar,<br />mas de <span className="o">restaurar e proteger</span>.</>}
+          subtitle="Utilizamos produtos e técnicas de ponta para um resultado superior e duradouro. Cada etapa é executada com atenção e paciência."
+        />
 
         <div className="services stagger reveal">
           {SERVICE_ITEMS.map((it) => (

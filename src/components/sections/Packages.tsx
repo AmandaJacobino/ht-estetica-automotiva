@@ -1,5 +1,6 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
+import { SectionHeader } from '../ui/SectionHeader';
 
 /** CTA band — inline call to action strip, also used inside Packages */
 export function CtaBand() {
@@ -29,17 +30,11 @@ export function Packages() {
   return (
     <section className="section" id="servicos">
       <div className="container">
-        <div className="reveal text-center">
-          <div className="sec-eyebrow inline-flex justify-center">
-            Pacotes
-          </div>
-          <h2 className="sec-title title-font">
-            Nossos <span className="o">Serviços</span>
-          </h2>
-          <p className="sec-sub mx-auto">
-            Escolha o cuidado ideal. Transparência total no que está incluso.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Pacotes"
+          title={<>Nossos <span className="o">Serviços</span></>}
+          subtitle="Escolha o cuidado ideal. Transparência total no que está incluso."
+        />
 
         <div className="wash-wrap reveal">
           {/* Lavagem Simples */}

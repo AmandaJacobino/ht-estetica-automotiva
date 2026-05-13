@@ -1,22 +1,17 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
+import { SectionHeader } from '../ui/SectionHeader';
 
 /** Contact section — direct contact channels card */
 export function Contact() {
   return (
     <section className="section pb-20" id="contato">
       <div className="container">
-        <div className="reveal text-center">
-          <div className="sec-eyebrow inline-flex justify-center">
-            Contato
-          </div>
-          <h2 className="sec-title title-font">
-            Pronto para um <span className="o">brilho</span><br />que vem até você?
-          </h2>
-          <p className="sec-sub mx-auto">
-            Atendimento a domicílio em Sorocaba e região. Resposta em minutos no WhatsApp.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Contato"
+          title={<>Pronto para um <span className="o">brilho</span><br />que vem até você?</>}
+          subtitle="Atendimento a domicílio em Sorocaba e região. Resposta em minutos no WhatsApp."
+        />
 
         <div className="contact-single">
           <div className="contact-card reveal">
