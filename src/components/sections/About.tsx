@@ -13,36 +13,12 @@ export function About() {
               <div className="about-frame">
                 <div className="about-person">
                   <div className="text-center">
-                    <div
-                      style={{
-                        width: 80,
-                        height: 80,
-                        borderRadius: '50%',
-                        margin: '0 auto 12px',
-                        background: 'linear-gradient(135deg,#ff6a1a,#d94e00)',
-                        display: 'grid',
-                        placeItems: 'center',
-                        fontFamily: 'Orbitron',
-                        fontWeight: 800,
-                        fontSize: 28,
-                        color: '#fff',
-                        boxShadow: '0 20px 40px -10px rgba(255,106,26,.5)',
-                      }}
-                    >
-                      HT
-                    </div>
-                    <div className="pmark">[ foto do Henrique ]</div>
+                    <div className="about-avatar title-font">HT</div>
                   </div>
                 </div>
               </div>
               <div className="cert-card">
-                <div className="cert-img-wrapper">
-                  <img
-                    src="https://placehold.co/400x300/2a1810/F25C05?text=Certificado+Profissional"
-                    alt="Certificado Profissional"
-                    className="cert-img-element"
-                  />
-                </div>
+                <div className="cert-img-wrapper" aria-hidden="true" />
                 <div className="cert-label">Certificado Profissional</div>
               </div>
             </div>

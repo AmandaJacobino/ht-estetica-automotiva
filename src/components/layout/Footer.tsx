@@ -69,7 +69,7 @@ export function Footer() {
 
         <div className="foot-bot">
           <div>© 2026 HT Estética Automotiva. Todos os direitos reservados.</div>
-          <div style={{ fontFamily: "'JetBrains Mono',monospace" }}>SOROCABA–SP · BRASIL</div>
+          <div className="mono">SOROCABA–SP · BRASIL</div>
         </div>
       </div>
     </footer>

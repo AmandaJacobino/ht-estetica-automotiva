@@ -7,8 +7,6 @@ export function Hero() {
     <section className="hero" id="inicio">
       <div className="container">
         <div className="hero-content">
-          <div className="hero-video">{/* video placeholder */}</div>
-
           <h1 className="h1 title-font">
             Cuide do <span className="accent">chega</span> antes de{' '}
             <span className="stroke">você</span>
