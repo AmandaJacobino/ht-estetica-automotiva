@@ -11,7 +11,8 @@
       "Bash(git commit -m 'style: remove dead CSS, fix text-align, transition:all, placeholder content *)",
       "Bash(git commit -m 'style: replace hardcoded orange rgba with design tokens, fix Orbitron bypasses *)",
       "Bash(git commit -m 'seo: add Open Graph, Twitter Card, canonical, JSON-LD; trim unused Google Fonts *)",
-      "Bash(git commit -m 'refactor: extract SectionHeader component, deduplicate NAV_LINKS *)"
+      "Bash(git commit -m 'refactor: extract SectionHeader component, deduplicate NAV_LINKS *)",
+      "Bash(git commit -m 'chore: update CLAUDE.md to reflect actual codebase state *)"
     ]
   }
 }
