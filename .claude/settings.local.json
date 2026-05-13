@@ -5,7 +5,8 @@
       "Bash(Remove-Item *)",
       "Bash(git add *)",
       "Bash(git commit -m 'security: add noopener to all target=blank links and delete orphaned app.jsx *)",
-      "Bash(git commit -m 'fix: Nav import order, BeforeAfter stale closure, useBeforeAfter unmount leak, Testimonials key *)"
+      "Bash(git commit -m 'fix: Nav import order, BeforeAfter stale closure, useBeforeAfter unmount leak, Testimonials key *)",
+      "Bash(git commit -m 'a11y: accessible FAQ accordion, main landmark, footer heading hierarchy, decorative aria-hidden *)"
     ]
   }
 }

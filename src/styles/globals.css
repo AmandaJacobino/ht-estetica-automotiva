@@ -1284,7 +1284,8 @@ section {
 }
 
 .faq-q {
-  list-style: none;
+  width: 100%;
+  text-align: left;
   cursor: pointer;
   padding: 20px 24px;
   display: flex;
@@ -1293,6 +1294,10 @@ section {
   gap: 16px;
   font-weight: 600;
   font-size: 15.5px;
+  background: none;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
 }
 
 .faq-q::-webkit-details-marker {
@@ -1519,7 +1524,7 @@ footer {
   }
 }
 
-.foot h4 {
+.foot h3 {
   font-size: 12px;
   letter-spacing: .14em;
   text-transform: uppercase;

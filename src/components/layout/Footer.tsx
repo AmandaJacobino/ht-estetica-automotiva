@@ -35,7 +35,7 @@ export function Footer() {
           </div>
 
           <div className="foot">
-            <h4>Navegação</h4>
+            <h3>Navegação</h3>
             <ul>
               <li><a href="#inicio">Início</a></li>
               <li><a href="#sobre">Sobre</a></li>
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
 
           <div className="foot">
-            <h4>Serviços</h4>
+            <h3>Serviços</h3>
             <ul>
               <li><a href="#servicos">Lavagem Simples</a></li>
               <li><a href="#servicos">Lavagem Completa</a></li>
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           <div className="foot">
-            <h4>Atendimento</h4>
+            <h3>Atendimento</h3>
             <ul>
               <li>Sorocaba — SP</li>
               <li>Seg–Sáb · 08h às 18h</li>

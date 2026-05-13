@@ -33,7 +33,7 @@ const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-/** FAQ section — accordion using native <details>/<summary> */
+/** FAQ section — accessible accordion */
 export function Faq() {
   return (
     <section className="section" id="faq">
@@ -51,8 +51,8 @@ export function Faq() {
         </div>
 
         <div className="faq reveal">
-          {FAQ_ITEMS.map((it) => (
-            <FaqCard key={it.question} it={it} />
+          {FAQ_ITEMS.map((it, i) => (
+            <FaqCard key={it.question} it={it} index={i} />
           ))}
         </div>
       </div>
@@ -60,18 +60,31 @@ export function Faq() {
   );
 }
 
-function FaqCard({ it }: { it: FaqItem }) {
+function FaqCard({ it, index }: { it: FaqItem; index: number }) {
   const [open, setOpen] = useState(false);
-  
+  const answerId = `faq-answer-${index}`;
+  const triggerId = `faq-trigger-${index}`;
+
   return (
     <div className={`faq-item ${open ? 'open' : ''}`}>
-      <div className="faq-q" onClick={() => setOpen(!open)}>
+      <button
+        id={triggerId}
+        className="faq-q"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls={answerId}
+      >
         <span>{it.question}</span>
-        <span className="faq-plus">
+        <span className="faq-plus" aria-hidden="true">
           <Ico.Plus />
         </span>
-      </div>
-      <div className="faq-a-wrapper">
+      </button>
+      <div
+        id={answerId}
+        className="faq-a-wrapper"
+        role="region"
+        aria-labelledby={triggerId}
+      >
         <div className="faq-a-content">
           <div className="faq-a">{it.answer}</div>
         </div>

@@ -9,9 +9,9 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       className="float-wa"
-      aria-label="WhatsApp"
+      aria-label="Conversar no WhatsApp"
     >
-      <Ico.Whats />
+      <Ico.Whats aria-hidden="true" />
     </a>
   );
 }

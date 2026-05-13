@@ -19,13 +19,15 @@ function App() {
       <Atmosphere />
       <div className="wrap">
         <Nav />
-        <Hero />
-        <Services />
-        <About />
-        <Packages />
-        <Testimonials />
-        <Faq />
-        <Contact />
+        <main>
+          <Hero />
+          <Services />
+          <About />
+          <Packages />
+          <Testimonials />
+          <Faq />
+          <Contact />
+        </main>
         <Footer />
       </div>
       <FloatingWhatsApp />

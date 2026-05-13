@@ -2,8 +2,8 @@
 export function Atmosphere() {
   return (
     <>
-      <div className="atmos" id="atmos" />
-      <div className="grid-overlay" id="grid" />
+      <div className="atmos" id="atmos" aria-hidden="true" />
+      <div className="grid-overlay" id="grid" aria-hidden="true" />
     </>
   );
 }
