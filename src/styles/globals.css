@@ -30,6 +30,14 @@
   --title-tracking: .02em;
   --title-case: none;
   --atmos-opacity: 0;
+  
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 56px;
+  --space-2xl: 80px;
+  --space-3xl: 120px;
 }
 
 * {

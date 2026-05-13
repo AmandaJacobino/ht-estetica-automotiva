@@ -33,11 +33,11 @@ export function BeforeAfter() {
   };
 
   return (
-    <div className="reveal" style={{ marginTop: 80 }}>
+    <div className="reveal mt-20">
       {/* Divider row */}
-      <div className="divider" style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+      <div className="divider flex items-center gap-4">
         <span>ANTES × DEPOIS / Arraste para comparar</span>
-        <span style={{ flex: 1, height: 1, background: 'linear-gradient(90deg,var(--line),transparent)' }} />
+        <span className="flex-1 h-px" style={{ background: 'linear-gradient(90deg,var(--line),transparent)' }} />
         <span style={{ fontFamily: "'JetBrains Mono',monospace", color: 'var(--orange)' }}>
           {String(idx + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
         </span>

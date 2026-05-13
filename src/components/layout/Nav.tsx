@@ -28,7 +28,7 @@ function MobileMenu({ open, onClose }: MobileMenuProps) {
         <a
           href={waLink()}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="btn btn-primary"
           style={{ width: '100%', justifyContent: 'center' }}
         >
@@ -99,7 +99,7 @@ export function Nav() {
             <a
               href={waLink()}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="nav-cta"
             >
               <Ico.Whats style={{ width: 14, height: 14 }} /> Orçamento

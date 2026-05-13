@@ -20,14 +20,14 @@ export function Testimonials() {
   return (
     <section className="section" id="depoimentos">
       <div className="container">
-        <div className="reveal" style={{ textAlign: 'center' }}>
-          <div className="sec-eyebrow" style={{ display: 'inline-flex', justifyContent: 'center' }}>
+        <div className="reveal text-center">
+          <div className="sec-eyebrow inline-flex justify-center">
             Depoimentos
           </div>
           <h2 className="sec-title title-font">
             O que nossos <span className="o">clientes dizem</span>
           </h2>
-          <p className="sec-sub" style={{ margin: '0 auto' }}>
+          <p className="sec-sub mx-auto">
             Avaliações reais de quem já confiou o carro com a gente.
           </p>
         </div>

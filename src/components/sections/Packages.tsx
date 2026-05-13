@@ -13,7 +13,7 @@ export function CtaBand() {
         className="btn btn-whats"
         href={waLink('Olá Henrique! Gostaria de entender qual serviço é ideal para meu carro.')}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <Ico.Whats style={{ width: 18, height: 18 }} /> Falar no WhatsApp
       </a>
@@ -29,14 +29,14 @@ export function Packages() {
   return (
     <section className="section" id="servicos">
       <div className="container">
-        <div className="reveal" style={{ textAlign: 'center' }}>
-          <div className="sec-eyebrow" style={{ justifyContent: 'center', display: 'inline-flex' }}>
+        <div className="reveal text-center">
+          <div className="sec-eyebrow inline-flex justify-center">
             Pacotes
           </div>
           <h2 className="sec-title title-font">
             Nossos <span className="o">Serviços</span>
           </h2>
-          <p className="sec-sub" style={{ margin: '0 auto' }}>
+          <p className="sec-sub mx-auto">
             Escolha o cuidado ideal. Transparência total no que está incluso.
           </p>
         </div>
@@ -58,7 +58,7 @@ export function Packages() {
             <a
               href={waLink('Olá! Gostaria de orçamento para a Lavagem Simples.')}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="wash-btn ghost"
             >
               Solicitar <Ico.Arrow style={{ width: 14, height: 14 }} />
@@ -83,7 +83,7 @@ export function Packages() {
             <a
               href={waLink('Olá! Gostaria de orçamento para a Lavagem Completa.')}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="wash-btn"
             >
               Solicitar orçamento <Ico.Arrow style={{ width: 14, height: 14 }} />

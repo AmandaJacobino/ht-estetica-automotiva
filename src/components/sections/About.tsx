@@ -4,7 +4,7 @@ import { waLink } from '../../lib/whatsapp';
 /** About section — Henrique's story, certification card and CTAs */
 export function About() {
   return (
-    <section className="section" id="sobre" style={{ paddingTop: 0 }}>
+    <section className="section pt-0" id="sobre">
       <div className="container">
         <div className="about">
           {/* Left — media */}
@@ -12,7 +12,7 @@ export function About() {
             <div className="about-media">
               <div className="about-frame">
                 <div className="about-person">
-                  <div style={{ textAlign: 'center' }}>
+                  <div className="text-center">
                     <div
                       style={{
                         width: 80,
@@ -73,12 +73,12 @@ export function About() {
             <div className="about-quote">
               Aqui, o seu carro não é "mais um". Ele é o mais importante.
             </div>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <div className="flex flex-wrap gap-3">
               <a
                 className="btn btn-primary"
                 href={waLink('Olá Henrique, quero solicitar um orçamento.')}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar orçamento
               </a>

@@ -38,14 +38,14 @@ export function Faq() {
   return (
     <section className="section" id="faq">
       <div className="container">
-        <div className="reveal" style={{ textAlign: 'center' }}>
-          <div className="sec-eyebrow" style={{ display: 'inline-flex', justifyContent: 'center' }}>
+        <div className="reveal text-center">
+          <div className="sec-eyebrow inline-flex justify-center">
             Perguntas
           </div>
           <h2 className="sec-title title-font">
             <span className="o">Dúvidas</span> Frequentes
           </h2>
-          <p className="sec-sub" style={{ margin: '0 auto' }}>
+          <p className="sec-sub mx-auto">
             Tire suas principais dúvidas antes mesmo de pedir orçamento.
           </p>
         </div>

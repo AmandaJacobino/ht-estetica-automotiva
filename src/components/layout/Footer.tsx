@@ -20,7 +20,7 @@ export function Footer() {
               <a
                 href="https://www.instagram.com/ht.esteticaautomotiva"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <Ico.Insta />

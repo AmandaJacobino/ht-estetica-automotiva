@@ -24,7 +24,7 @@ export function Hero() {
               className="btn btn-primary"
               href={waLink()}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar Orçamento Gratuito
             </a>
