@@ -66,7 +66,7 @@ export function BeforeAfter() {
 
         {/* Caption */}
         <div className="ba-caption">
-          <div className="ba-cap-title">{cur.label}</div>
+          <div className="ba-cap-title title-font">{cur.label}</div>
           <div className="ba-cap-sub">{cur.car}</div>
         </div>
 

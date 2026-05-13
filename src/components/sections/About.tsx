@@ -27,7 +27,7 @@ export function About() {
           {/* Right — text */}
           <div className="reveal">
             <div className="sec-eyebrow">Quem está por trás</div>
-            <h2 className="title-font">
+            <h2 className="sec-title title-font">
               Mais do que polir, é <span className="o">restaurar a história</span>.
             </h2>
             <div className="about-text">

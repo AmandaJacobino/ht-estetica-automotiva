@@ -146,8 +146,8 @@ section {
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(242, 92, 5, .18), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(242, 92, 5, .06), transparent 60%),
+    radial-gradient(1200px 600px at 85% -10%, rgba(var(--orange-rgb), .18), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(var(--orange-rgb), .06), transparent 60%),
     radial-gradient(800px 500px at 50% 120%, rgba(59, 130, 246, .05), transparent 60%);
   opacity: var(--atmos-opacity, 1);
   transition: opacity .4s ease;
@@ -520,12 +520,12 @@ section {
 .btn-primary {
   background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
   color: #fff;
-  box-shadow: 0 12px 36px -12px rgba(242, 92, 5, .75), inset 0 1px 0 rgba(255, 255, 255, .22);
+  box-shadow: 0 12px 36px -12px rgba(var(--orange-rgb), .75), inset 0 1px 0 rgba(255, 255, 255, .22);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px -10px rgba(242, 92, 5, .85)
+  box-shadow: 0 16px 40px -10px rgba(var(--orange-rgb), .85)
 }
 
 .btn-primary::before {
@@ -713,8 +713,8 @@ section {
 
 .svc:hover {
   transform: translateY(-4px);
-  border-color: rgba(242, 92, 5, .35);
-  box-shadow: 0 30px 60px -30px rgba(242, 92, 5, .3)
+  border-color: rgba(var(--orange-rgb), .35);
+  box-shadow: 0 30px 60px -30px rgba(var(--orange-rgb), .3)
 }
 
 .svc::before {
@@ -723,7 +723,7 @@ section {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(242, 92, 5, .5), transparent 40%);
+  background: linear-gradient(135deg, rgba(var(--orange-rgb), .5), transparent 40%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -749,12 +749,12 @@ section {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(242, 92, 5, .15), rgba(242, 92, 5, .04));
-  border: 1px solid rgba(242, 92, 5, .2);
+  background: linear-gradient(135deg, rgba(var(--orange-rgb), .15), rgba(var(--orange-rgb), .04));
+  border: 1px solid rgba(var(--orange-rgb), .2);
   display: grid;
   place-items: center;
   margin-bottom: 22px;
-  box-shadow: inset 0 0 30px rgba(242, 92, 5, .18), 0 8px 24px -8px rgba(242, 92, 5, .25);
+  box-shadow: inset 0 0 30px rgba(var(--orange-rgb), .18), 0 8px 24px -8px rgba(var(--orange-rgb), .25);
   color: var(--orange);
 }
 
@@ -823,7 +823,7 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(200px 200px at 50% 30%, rgba(242, 92, 5, .2), transparent 60%),
+    radial-gradient(200px 200px at 50% 30%, rgba(var(--orange-rgb), .2), transparent 60%),
     repeating-linear-gradient(45deg, rgba(255, 255, 255, .03) 0 8px, transparent 8px 16px);
   display: grid;
   place-items: center;
@@ -860,7 +860,7 @@ section {
   height: 110px;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(242, 92, 5, .2);
+  border: 1px solid rgba(var(--orange-rgb), .2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -916,7 +916,7 @@ section {
   margin: 28px 0 24px;
   padding: 18px 22px;
   border-left: 3px solid var(--orange);
-  background: rgba(242, 92, 5, .05);
+  background: rgba(var(--orange-rgb), .05);
   border-radius: 0 12px 12px 0;
   font-size: 17px;
   font-weight: 600;
@@ -950,14 +950,14 @@ section {
 
 .wash:hover {
   transform: translateY(-4px);
-  border-color: rgba(242, 92, 5, .3)
+  border-color: rgba(var(--orange-rgb), .3)
 }
 
 .wash.featured {
   background:
-    radial-gradient(500px 200px at 80% 0%, rgba(242, 92, 5, .18), transparent 60%),
+    radial-gradient(500px 200px at 80% 0%, rgba(var(--orange-rgb), .18), transparent 60%),
     linear-gradient(170deg, var(--bg-2), var(--bg-1));
-  border-color: rgba(242, 92, 5, .28);
+  border-color: rgba(var(--orange-rgb), .28);
 }
 
 .wash-badge {
@@ -978,13 +978,13 @@ section {
   width: 60px;
   height: 60px;
   border-radius: 15px;
-  background: linear-gradient(135deg, rgba(242, 92, 5, .18), rgba(242, 92, 5, .04));
-  border: 1px solid rgba(242, 92, 5, .22);
+  background: linear-gradient(135deg, rgba(var(--orange-rgb), .18), rgba(var(--orange-rgb), .04));
+  border: 1px solid rgba(var(--orange-rgb), .22);
   display: grid;
   place-items: center;
   margin-bottom: 22px;
   color: var(--orange);
-  box-shadow: inset 0 0 30px rgba(242, 92, 5, .18);
+  box-shadow: inset 0 0 30px rgba(var(--orange-rgb), .18);
 }
 
 .wash-ico svg {
@@ -994,9 +994,7 @@ section {
 
 .wash h3 {
   margin: 0 0 6px;
-  font-family: 'Orbitron', sans-serif;
   font-size: 22px;
-  font-weight: 700;
   letter-spacing: .02em
 }
 
@@ -1069,7 +1067,7 @@ section {
   background: linear-gradient(135deg, var(--orange), var(--orange-deep));
   border-color: transparent;
   color: #fff;
-  box-shadow: 0 10px 30px -12px rgba(242, 92, 5, .6);
+  box-shadow: 0 10px 30px -12px rgba(var(--orange-rgb), .6);
 }
 
 .wash-btn:hover {
@@ -1112,7 +1110,7 @@ section {
 
 .testi:hover {
   transform: translateY(-3px);
-  border-color: rgba(242, 92, 5, .25)
+  border-color: rgba(var(--orange-rgb), .25)
 }
 
 .testi-stars {
@@ -1172,7 +1170,7 @@ section {
   font-family: 'Orbitron', sans-serif;
   font-size: 54px;
   line-height: 1;
-  color: rgba(242, 92, 5, .12);
+  color: rgba(var(--orange-rgb), .12);
   font-weight: 900;
 }
 
@@ -1193,7 +1191,7 @@ section {
 }
 
 .faq-item.open {
-  border-color: rgba(242, 92, 5, .3)
+  border-color: rgba(var(--orange-rgb), .3)
 }
 
 .faq-q {
@@ -1222,8 +1220,8 @@ section {
   height: 32px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: rgba(242, 92, 5, .08);
-  border: 1px solid rgba(242, 92, 5, .2);
+  background: rgba(var(--orange-rgb), .08);
+  border: 1px solid rgba(var(--orange-rgb), .2);
   color: var(--orange);
   display: grid;
   place-items: center;
@@ -1345,8 +1343,8 @@ section {
 
 .contact-ico.loc {
   color: var(--orange);
-  background: rgba(242, 92, 5, .08);
-  border-color: rgba(242, 92, 5, .25)
+  background: rgba(var(--orange-rgb), .08);
+  border-color: rgba(var(--orange-rgb), .25)
 }
 
 .contact-ico svg {
@@ -1400,7 +1398,7 @@ section {
 .field select:focus {
   outline: none;
   border-color: var(--orange);
-  background: rgba(242, 92, 5, .04);
+  background: rgba(var(--orange-rgb), .04);
 }
 
 .field textarea {
@@ -1506,8 +1504,8 @@ footer {
 
 .foot-socials a:hover {
   color: var(--fg);
-  border-color: rgba(242, 92, 5, .4);
-  background: rgba(242, 92, 5, .06)
+  border-color: rgba(var(--orange-rgb), .4);
+  background: rgba(var(--orange-rgb), .06)
 }
 
 .foot-socials svg {
@@ -1585,9 +1583,9 @@ footer {
   padding: 48px 40px;
   border-radius: 24px;
   background:
-    radial-gradient(600px 200px at 80% 50%, rgba(242, 92, 5, .25), transparent 60%),
+    radial-gradient(600px 200px at 80% 50%, rgba(var(--orange-rgb), .25), transparent 60%),
     linear-gradient(135deg, #18120e, #0f0f12);
-  border: 1px solid rgba(242, 92, 5, .25);
+  border: 1px solid rgba(var(--orange-rgb), .25);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1599,8 +1597,6 @@ footer {
   font-size: clamp(22px, 2.4vw, 30px);
   margin: 0;
   line-height: 1.2;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
   letter-spacing: -.01em
 }
 
@@ -1637,7 +1633,7 @@ footer {
 
 .ba-after {
   background:
-    radial-gradient(600px 300px at 50% 30%, rgba(242, 92, 5, .28), transparent 60%),
+    radial-gradient(600px 300px at 50% 30%, rgba(var(--orange-rgb), .28), transparent 60%),
     linear-gradient(135deg, #0a0a0d, #1a1410);
   clip-path: inset(0 0 0 50%);
 }
@@ -1664,7 +1660,7 @@ footer {
 .ba-after-lbl {
   right: 18px;
   color: var(--orange);
-  border-color: rgba(242, 92, 5, .4)
+  border-color: rgba(var(--orange-rgb), .4)
 }
 
 .ba-handle {
@@ -1674,7 +1670,7 @@ footer {
   left: 50%;
   width: 3px;
   background: var(--orange);
-  box-shadow: 0 0 20px rgba(242, 92, 5, .6);
+  box-shadow: 0 0 20px rgba(var(--orange-rgb), .6);
   transform: translateX(-50%);
 }
 
@@ -1689,7 +1685,7 @@ footer {
   background: linear-gradient(135deg, var(--orange), var(--orange-deep));
   display: grid;
   place-items: center;
-  box-shadow: 0 12px 30px -8px rgba(242, 92, 5, .7);
+  box-shadow: 0 12px 30px -8px rgba(var(--orange-rgb), .7);
 }
 
 .ba-knob svg {
@@ -1751,9 +1747,7 @@ footer {
 }
 
 .ba-cap-title {
-  font-family: 'Orbitron', sans-serif;
   font-size: 13px;
-  font-weight: 700;
   letter-spacing: .08em
 }
 
