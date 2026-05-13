@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
@@ -10,6 +11,8 @@ const NAV_LINKS = [
   { href: '#contato', label: 'Contato' },
 ];
 
+export { NAV_LINKS };
+
 interface MobileMenuProps {
   open: boolean;
   onClose: () => void;
@@ -18,9 +21,14 @@ interface MobileMenuProps {
 /** Full-screen mobile navigation overlay */
 function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (
-    <div className={`mobile-menu ${open ? 'open' : ''}`}>
+    <nav
+      id="mobile-nav"
+      className={`mobile-menu ${open ? 'open' : ''}`}
+      aria-label="Navegação mobile"
+      aria-hidden={!open}
+    >
       {NAV_LINKS.map((l) => (
-        <a key={l.href} href={l.href} onClick={onClose}>
+        <a key={l.href} href={l.href} onClick={onClose} tabIndex={open ? 0 : -1}>
           {l.label}
         </a>
       ))}
@@ -31,20 +39,21 @@ function MobileMenu({ open, onClose }: MobileMenuProps) {
           rel="noopener noreferrer"
           className="btn btn-primary"
           style={{ width: '100%', justifyContent: 'center' }}
+          tabIndex={open ? 0 : -1}
         >
-          <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar Orçamento
+          <Ico.Whats style={{ width: 16, height: 16 }} aria-hidden="true" /> Solicitar Orçamento
         </a>
       </div>
-    </div>
+    </nav>
   );
 }
 
 /** Sticky top navigation bar with desktop links and mobile burger menu */
 export function Nav() {
-  const [open, setOpen] = React.useState(false);
-  const [active, setActive] = React.useState<string>('inicio');
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string>('inicio');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const ids = NAV_LINKS.map((l) => l.href.slice(1));
     const sections = ids
       .map((id) => document.getElementById(id))
@@ -75,7 +84,7 @@ export function Nav() {
       <nav className="nav">
         <div className="container nav-inner">
           <div className="logo">
-            <div className="logo-text" style={{ fontSize: 15 }}>
+            <div className="logo-text">
               <span className="or">HT</span>{' '}
               <span className="bl">Estética</span>{' '}
               <span className="or">Automotiva</span>
@@ -102,16 +111,18 @@ export function Nav() {
               rel="noopener noreferrer"
               className="nav-cta"
             >
-              <Ico.Whats style={{ width: 14, height: 14 }} /> Orçamento
+              <Ico.Whats style={{ width: 14, height: 14 }} aria-hidden="true" /> Orçamento
             </a>
           </div>
           <button
             id="nav-burger"
             className="burger"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Abrir menu"
+            aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
           >
-            {open ? <Ico.Close /> : <Ico.Menu />}
+            {open ? <Ico.Close aria-hidden="true" /> : <Ico.Menu aria-hidden="true" />}
           </button>
         </div>
       </nav>
@@ -119,6 +130,3 @@ export function Nav() {
     </>
   );
 }
-
-// React needs to be in scope for JSX in older setups; import it explicitly.
-import React from 'react';

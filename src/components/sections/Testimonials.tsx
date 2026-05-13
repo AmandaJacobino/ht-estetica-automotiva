@@ -33,8 +33,8 @@ export function Testimonials() {
         </div>
 
         <div className="testis reveal">
-          {TESTIMONIALS.map((t, i) => (
-            <div className="testi" key={i}>
+          {TESTIMONIALS.map((t) => (
+            <div className="testi" key={t.name}>
               <div className="testi-quote">"</div>
               <div className="testi-stars">
                 {Array.from({ length: 5 }).map((_, j) => (

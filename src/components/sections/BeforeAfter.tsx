@@ -25,11 +25,11 @@ export function BeforeAfter() {
   const goTo = (i: number) => setIdx(i);
   const goPrev = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIdx((idx - 1 + total) % total);
+    setIdx((i) => (i - 1 + total) % total);
   };
   const goNext = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIdx((idx + 1) % total);
+    setIdx((i) => (i + 1) % total);
   };
 
   return (
