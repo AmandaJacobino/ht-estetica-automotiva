@@ -7,6 +7,18 @@ export function Hero() {
     <section className="hero" id="inicio">
       <div className="container">
         <div className="hero-content">
+          <div className="hero-video">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-hidden="true"
+            >
+              {/* Add <source src="/videos/hero.mp4" type="video/mp4" /> when the file is ready */}
+            </video>
+          </div>
+
           <h1 className="h1 title-font">
             Cuide do <span className="accent">chega</span> antes de{' '}
             <span className="stroke">você</span>
