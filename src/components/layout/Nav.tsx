@@ -26,10 +26,10 @@ function MobileMenu({ open, onClose }: MobileMenuProps) {
       id="mobile-nav"
       className={`mobile-menu ${open ? 'open' : ''}`}
       aria-label="Navegação mobile"
-      aria-hidden={!open}
+      {...(!open ? { inert: '' } : {})}
     >
       {NAV_LINKS.map((l) => (
-        <a key={l.href} href={l.href} onClick={onClose} tabIndex={open ? 0 : -1}>
+        <a key={l.href} href={l.href} onClick={onClose}>
           {l.label}
         </a>
       ))}
@@ -40,7 +40,6 @@ function MobileMenu({ open, onClose }: MobileMenuProps) {
           rel="noopener noreferrer"
           className="btn btn-primary"
           style={{ width: '100%', justifyContent: 'center' }}
-          tabIndex={open ? 0 : -1}
         >
           <Ico.Whats size={16} /> Solicitar Orçamento
         </a>
@@ -130,6 +129,7 @@ export function Nav() {
             </a>
           </div>
           <button
+            type="button"
             id="nav-burger"
             className="burger"
             onClick={() => setOpen((v) => !v)}
