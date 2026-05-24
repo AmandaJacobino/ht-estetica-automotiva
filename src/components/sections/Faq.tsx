@@ -63,6 +63,7 @@ function FaqCard({ it, index }: { it: FaqItem; index: number }) {
   return (
     <div className={`faq-item ${open ? 'open' : ''}`}>
       <button
+        type="button"
         id={triggerId}
         className="faq-q"
         onClick={() => setOpen((v) => !v)}

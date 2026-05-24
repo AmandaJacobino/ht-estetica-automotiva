@@ -84,12 +84,12 @@ export function BeforeAfter() {
         </div>
 
         {/* Navigation arrows */}
-        <button className="ba-nav prev" onClick={goPrev} aria-label="Anterior">
+        <button type="button" className="ba-nav prev" onClick={goPrev} aria-label="Anterior">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 6l-6 6 6 6" />
           </svg>
         </button>
-        <button className="ba-nav next" onClick={goNext} aria-label="Próximo">
+        <button type="button" className="ba-nav next" onClick={goNext} aria-label="Próximo">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 6l6 6-6 6" />
           </svg>
@@ -100,6 +100,7 @@ export function BeforeAfter() {
       <div className="ba-dots">
         {BA_SLIDES.map((_, i) => (
           <button
+            type="button"
             key={i}
             className={`ba-dot ${i === idx ? 'on' : ''}`}
             onClick={() => goTo(i)}
