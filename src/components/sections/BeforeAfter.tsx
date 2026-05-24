@@ -57,7 +57,12 @@ export function BeforeAfter() {
 
         {/* After layer */}
         <div className="ba-layer ba-after" style={{ clipPath: `inset(0 0 0 ${pos}%)` }}>
-          <div className="ba-shine-text" style={{ color: 'rgba(242,92,5,.2)' }}>{cur.after}</div>
+          <div
+            className="ba-shine-text"
+            style={{ color: 'rgba(var(--orange-rgb), 0.2)' }}
+          >
+            {cur.after}
+          </div>
         </div>
 
         {/* Labels */}
