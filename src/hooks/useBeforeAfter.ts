@@ -19,7 +19,8 @@ export function useBeforeAfter(initialPos = 50): UseBeforeAfterReturn {
   const move = useCallback((e: MouseEvent | TouchEvent) => {
     if (!ref.current) return;
     const r = ref.current.getBoundingClientRect();
-    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientX =
+      'touches' in e ? (e.touches[0]?.clientX ?? 0) : e.clientX;
     const x = clientX - r.left;
     setPos(Math.max(4, Math.min(96, (x / r.width) * 100)));
   }, []);

@@ -68,8 +68,8 @@ export function Nav() {
           else visible.delete(e.target.id);
         }
         if (visible.size > 0) {
-          const top = [...visible.entries()].sort((a, b) => b[1] - a[1])[0][0];
-          setActive(top);
+          const topEntry = [...visible.entries()].sort((a, b) => b[1] - a[1])[0];
+          if (topEntry) setActive(topEntry[0]);
         }
       },
       { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },

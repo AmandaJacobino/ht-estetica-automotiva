@@ -20,7 +20,7 @@ export function BeforeAfter() {
   const [idx, setIdx] = useState(0);
   const { pos, ref, handleDragStart } = useBeforeAfter(50);
   const total = BA_SLIDES.length;
-  const cur = BA_SLIDES[idx];
+  const cur = BA_SLIDES[idx % total]!;
 
   const goTo = (i: number) => setIdx(i);
   const goPrev = (e: React.MouseEvent) => {
