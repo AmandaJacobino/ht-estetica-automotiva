@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Self-hosted fonts — Inter 400 & Teko 700 (latin + latin-ext) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/teko-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/teko-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============================================================
    HT Estética Automotiva — Global Styles
    Original CSS preserved verbatim from ht-estetica-automotiva.html
@@ -138,7 +175,7 @@ body {
 
 /* Title font — driven by tweak */
 .title-font {
-  font-family: var(--title-font, 'Orbitron'), 'Inter', sans-serif;
+  font-family: var(--title-font, 'Teko'), 'Inter', sans-serif;
   letter-spacing: var(--title-tracking, 0.02em);
   text-transform: var(--title-case, none);
   font-weight: 800
@@ -250,7 +287,7 @@ section {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-weight: 800;
   letter-spacing: .06em
 }
@@ -265,7 +302,7 @@ section {
   font-size: 14px;
   color: #fff;
   box-shadow: 0 10px 30px -10px rgba(var(--orange-rgb), .7), inset 0 1px 0 rgba(255, 255, 255, .3);
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -619,8 +656,9 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-family: 'Teko', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
   color: var(--orange);
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -720,7 +758,7 @@ section {
   position: absolute;
   top: 18px;
   right: 22px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-size: 11px;
   color: var(--fg-mute);
   letter-spacing: .18em;
@@ -980,7 +1018,7 @@ section {
 }
 
 .wash-price .p {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-size: 28px;
   font-weight: 800;
   color: var(--orange)
@@ -1120,7 +1158,7 @@ section {
   background: linear-gradient(135deg, var(--orange), var(--orange-deep));
   display: grid;
   place-items: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #fff;
@@ -1141,7 +1179,7 @@ section {
   position: absolute;
   top: 18px;
   right: 22px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-size: 54px;
   line-height: 1;
   color: rgba(var(--orange-rgb), .12);
@@ -1395,7 +1433,7 @@ footer {
 }
 
 .foot-brand {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: .06em;
@@ -1444,6 +1482,13 @@ footer {
 .foot-socials svg {
   width: 16px;
   height: 16px
+}
+
+.foot-loc {
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
 }
 
 .foot-bot {
@@ -1576,8 +1621,9 @@ footer {
   top: 18px;
   padding: 6px 14px;
   border-radius: 999px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Teko', sans-serif;
   font-size: 11px;
+  font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
   background: rgba(0, 0, 0, .6);
@@ -1718,7 +1764,7 @@ footer {
 }
 
 .ba-shine-text {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-size: 56px;
   font-weight: 900;
   color: rgba(255, 255, 255, .04);
@@ -1771,4 +1817,12 @@ footer {
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, var(--line), transparent)
+}
+
+.ba-index {
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .15em;
+  color: var(--orange);
 }

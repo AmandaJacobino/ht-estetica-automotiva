@@ -38,7 +38,7 @@ export function BeforeAfter() {
       <div className="divider flex items-center gap-4">
         <span>ANTES × DEPOIS / Arraste para comparar</span>
         <span className="flex-1 h-px" style={{ background: 'linear-gradient(90deg,var(--line),transparent)' }} />
-        <span style={{ fontFamily: "'JetBrains Mono',monospace", color: 'var(--orange)' }}>
+        <span className="ba-index">
           {String(idx + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
         </span>
       </div>

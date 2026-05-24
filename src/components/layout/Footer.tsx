@@ -67,7 +67,7 @@ export function Footer() {
 
         <div className="foot-bot">
           <div>© 2026 HT Estética Automotiva. Todos os direitos reservados.</div>
-          <div className="mono">SOROCABA–SP · BRASIL</div>
+          <div className="foot-loc">SOROCABA–SP · BRASIL</div>
         </div>
       </div>
     </footer>
