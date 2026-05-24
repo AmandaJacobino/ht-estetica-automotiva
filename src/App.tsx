@@ -16,10 +16,13 @@ function App() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Pular para o conteúdo
+      </a>
       <Atmosphere />
       <div className="wrap">
         <Nav />
-        <main>
+        <main id="main-content">
           <Hero />
           <Services />
           <About />

@@ -81,8 +81,9 @@ export function Nav() {
 
   return (
     <>
-      <nav className="nav">
-        <div className="container nav-inner">
+      <header>
+        <nav className="nav" aria-label="Principal">
+          <div className="container nav-inner">
           <div className="logo">
             <div className="logo-text">
               <span className="or">HT</span>{' '}
@@ -124,8 +125,9 @@ export function Nav() {
           >
             {open ? <Ico.Close aria-hidden="true" /> : <Ico.Menu aria-hidden="true" />}
           </button>
-        </div>
-      </nav>
+          </div>
+        </nav>
+      </header>
       <MobileMenu open={open} onClose={() => setOpen(false)} />
     </>
   );
