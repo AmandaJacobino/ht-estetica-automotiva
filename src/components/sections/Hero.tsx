@@ -51,10 +51,10 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar Orçamento Gratuito
+              <Ico.Whats size={16} /> Solicitar Orçamento Gratuito
             </a>
             <a className="btn btn-ghost" href="#servicos">
-              Conhecer Serviços <Ico.Arrow style={{ width: 16, height: 16 }} />
+              Conhecer Serviços <Ico.Arrow size={16} />
             </a>
           </div>
         </div>

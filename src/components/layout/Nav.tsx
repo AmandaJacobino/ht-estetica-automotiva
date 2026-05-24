@@ -42,7 +42,7 @@ function MobileMenu({ open, onClose }: MobileMenuProps) {
           style={{ width: '100%', justifyContent: 'center' }}
           tabIndex={open ? 0 : -1}
         >
-          <Ico.Whats style={{ width: 16, height: 16 }} aria-hidden="true" /> Solicitar Orçamento
+          <Ico.Whats size={16} /> Solicitar Orçamento
         </a>
       </div>
     </nav>
@@ -126,7 +126,7 @@ export function Nav() {
               rel="noopener noreferrer"
               className="nav-cta"
             >
-              <Ico.Whats style={{ width: 14, height: 14 }} aria-hidden="true" /> Orçamento
+              <Ico.Whats size={14} /> Orçamento
             </a>
           </div>
           <button
@@ -137,7 +137,7 @@ export function Nav() {
             aria-expanded={open}
             aria-controls="mobile-nav"
           >
-            {open ? <Ico.Close aria-hidden="true" /> : <Ico.Menu aria-hidden="true" />}
+            {open ? <Ico.Close /> : <Ico.Menu />}
           </button>
           </div>
         </nav>

@@ -11,7 +11,7 @@ export function FloatingWhatsApp() {
       className="float-wa"
       aria-label="Conversar no WhatsApp"
     >
-      <Ico.Whats aria-hidden="true" />
+      <Ico.Whats />
     </a>
   );
 }

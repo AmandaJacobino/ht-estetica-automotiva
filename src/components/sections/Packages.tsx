@@ -16,7 +16,7 @@ export function CtaBand() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Ico.Whats style={{ width: 18, height: 18 }} /> Falar no WhatsApp
+        <Ico.Whats size={18} /> Falar no WhatsApp
       </a>
     </div>
   );
@@ -56,7 +56,7 @@ export function Packages() {
               rel="noopener noreferrer"
               className="wash-btn ghost"
             >
-              Solicitar <Ico.Arrow style={{ width: 14, height: 14 }} />
+              Solicitar <Ico.Arrow size={14} />
             </a>
           </div>
 
@@ -81,7 +81,7 @@ export function Packages() {
               rel="noopener noreferrer"
               className="wash-btn"
             >
-              Solicitar orçamento <Ico.Arrow style={{ width: 14, height: 14 }} />
+              Solicitar orçamento <Ico.Arrow size={14} />
             </a>
           </div>
         </div>

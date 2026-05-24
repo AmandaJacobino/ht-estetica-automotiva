@@ -56,10 +56,10 @@ export function About() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar orçamento
+                <Ico.Whats size={16} /> Solicitar orçamento
               </a>
               <a className="btn btn-ghost" href="#servicos">
-                Ver serviços <Ico.Arrow style={{ width: 16, height: 16 }} />
+                Ver serviços <Ico.Arrow size={16} />
               </a>
             </div>
           </div>

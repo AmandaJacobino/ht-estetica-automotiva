@@ -24,7 +24,7 @@ export function Contact() {
                 <div className="contact-lbl">WhatsApp</div>
                 <div className="contact-val">(15) 99786-1991</div>
               </div>
-              <Ico.Arrow style={{ width: 18, height: 18, color: 'var(--fg-mute)' }} />
+              <Ico.Arrow size={18} style={{ color: 'var(--fg-mute)' }} />
             </a>
 
             {/* Email row */}
@@ -34,7 +34,7 @@ export function Contact() {
                 <div className="contact-lbl">E-mail</div>
                 <div className="contact-val">tedescohenrique@hotmail.com</div>
               </div>
-              <Ico.Arrow style={{ width: 18, height: 18, color: 'var(--fg-mute)' }} />
+              <Ico.Arrow size={18} style={{ color: 'var(--fg-mute)' }} />
             </a>
 
             {/* Instagram row */}
@@ -49,7 +49,7 @@ export function Contact() {
                 <div className="contact-lbl">Instagram</div>
                 <div className="contact-val">@ht.esteticaautomotiva</div>
               </div>
-              <Ico.Arrow style={{ width: 18, height: 18, color: 'var(--fg-mute)' }} />
+              <Ico.Arrow size={18} style={{ color: 'var(--fg-mute)' }} />
             </a>
 
             {/* Location row */}
@@ -77,7 +77,7 @@ export function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Ico.Whats style={{ width: 18, height: 18 }} /> Chamar no WhatsApp agora
+                <Ico.Whats size={18} /> Chamar no WhatsApp agora
               </a>
             </div>
           </div>
