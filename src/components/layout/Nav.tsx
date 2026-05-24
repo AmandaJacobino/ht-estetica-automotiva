@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BrandWordmark } from '../ui/BrandWordmark';
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
@@ -102,11 +103,7 @@ export function Nav() {
         <nav className="nav" aria-label="Principal">
           <div className="container nav-inner">
           <div className="logo">
-            <div className="logo-text">
-              <span className="or">HT</span>{' '}
-              <span className="bl">Estética</span>{' '}
-              <span className="or">Automotiva</span>
-            </div>
+            <BrandWordmark className="logo-text" />
           </div>
           <div className="nav-links">
             {NAV_LINKS.map((l) => {

@@ -1,3 +1,4 @@
+import { BrandWordmark } from '../ui/BrandWordmark';
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 import { NAV_LINKS } from './Nav';
@@ -9,11 +10,7 @@ export function Footer() {
       <div className="container">
         <div className="foot-grid">
           <div className="foot">
-            <div className="foot-brand">
-              <span className="or">HT</span>{' '}
-              <span className="bl">Estética</span>{' '}
-              <span className="or">Automotiva</span>
-            </div>
+            <BrandWordmark className="foot-brand" />
             <p className="foot-desc">
               Detalhamento automotivo com paixão e técnica. Atendimento a domicílio em Sorocaba e região.
             </p>
