@@ -31,7 +31,7 @@ export function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <div className="testi" key={t.name}>
               <div className="testi-quote">"</div>
-              <div className="testi-stars">
+              <div className="testi-stars" aria-label="5 out of 5 stars">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Ico.Star key={j} />
                 ))}
