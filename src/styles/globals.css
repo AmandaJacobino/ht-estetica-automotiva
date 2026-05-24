@@ -301,8 +301,10 @@ section {
 
 .nav-links {
   display: flex;
+  flex-wrap: nowrap;
   gap: 4px;
   align-items: center;
+  flex-shrink: 0;
   padding: 6px;
   border-radius: 999px;
   background: rgba(255, 255, 255, .025);
@@ -314,6 +316,7 @@ section {
   padding: 9px 16px;
   border-radius: 999px;
   font-size: 13.5px;
+  white-space: nowrap;
   color: var(--fg-dim);
   transition: color .25s ease, background-color .25s ease;
   background-color: transparent;
@@ -373,7 +376,7 @@ section {
   height: 22px
 }
 
-@media (max-width:860px) {
+@media (max-width:1024px) {
   .nav-links {
     display: none
   }
