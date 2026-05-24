@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="foot-bot">
-          <div>© 2026 HT Estética Automotiva. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} HT Estética Automotiva. Todos os direitos reservados.</div>
           <div className="foot-loc">SOROCABA–SP · BRASIL</div>
         </div>
       </div>
