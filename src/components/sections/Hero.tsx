@@ -37,7 +37,7 @@ export function Hero() {
           <h1 className="h1 title-font">
             Cuide do <span className="accent">chega</span> antes de{' '}
             <span className="stroke">você</span>
-            <span className="h1-bang" />!
+            <span className="h1-bang" aria-hidden="true" />!
           </h1>
 
           <p className="hero-sub">
