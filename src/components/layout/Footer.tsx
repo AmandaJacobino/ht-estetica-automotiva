@@ -44,10 +44,10 @@ export function Footer() {
           <div className="foot">
             <h3>Serviços</h3>
             <ul>
-              <li><a href="#servicos">Lavagem Simples</a></li>
-              <li><a href="#servicos">Lavagem Completa</a></li>
-              <li><a href="#processo">Polimento</a></li>
-              <li><a href="#processo">Proteção e Selagem</a></li>
+              <li><a href="#lavagem-simples">Lavagem Simples</a></li>
+              <li><a href="#lavagem-completa">Lavagem Completa</a></li>
+              <li><a href="#polimento">Polimento</a></li>
+              <li><a href="#protecao">Proteção e Selagem</a></li>
             </ul>
           </div>
 

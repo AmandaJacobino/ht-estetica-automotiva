@@ -38,7 +38,7 @@ export function Packages() {
 
         <div className="wash-wrap reveal">
           {/* Lavagem Simples */}
-          <div className="wash">
+          <div className="wash" id="lavagem-simples">
             <div className="wash-ico"><Ico.Droplet /></div>
             <h3 className="title-font">Lavagem Simples</h3>
             <div className="wash-price">
@@ -61,7 +61,7 @@ export function Packages() {
           </div>
 
           {/* Lavagem Completa */}
-          <div className="wash featured">
+          <div className="wash featured" id="lavagem-completa">
             <div className="wash-badge">Mais pedido</div>
             <div className="wash-ico"><Ico.Sparkle /></div>
             <h3 className="title-font">Lavagem Completa</h3>
