@@ -3,36 +3,39 @@ import { BeforeAfter } from './BeforeAfter';
 import { SectionHeader } from '../ui/SectionHeader';
 
 interface ServiceItem {
-  n: string;
-  ico: React.ReactNode;
-  t: string;
-  d: string;
+  number: string;
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  anchorId?: string;
 }
 
 const SERVICE_ITEMS: ServiceItem[] = [
   {
-    n: '01',
-    ico: <Ico.Wrench />,
-    t: 'Correção de Riscos',
-    d: 'Elimina arranhões, manchas e imperfeições profundas usando técnicas de corte profissional.',
+    number: '01',
+    icon: <Ico.Wrench />,
+    title: 'Correção de Riscos',
+    description: 'Elimina arranhões, manchas e imperfeições profundas usando técnicas de corte profissional.',
   },
   {
-    n: '02',
-    ico: <Ico.Sparkle />,
-    t: 'Aplicação de Polimento',
-    d: 'Refinamento da superfície para restaurar o brilho original e uniformizar a pintura.',
+    number: '02',
+    icon: <Ico.Sparkle />,
+    title: 'Aplicação de Polimento',
+    description: 'Refinamento da superfície para restaurar o brilho original e uniformizar a pintura.',
+    anchorId: 'polimento',
   },
   {
-    n: '03',
-    ico: <Ico.Shield />,
-    t: 'Proteção e Selagem',
-    d: 'Camada protetora contra raios UV, chuva ácida e poluentes atmosféricos.',
+    number: '03',
+    icon: <Ico.Shield />,
+    title: 'Proteção e Selagem',
+    description: 'Camada protetora contra raios UV, chuva ácida e poluentes atmosféricos.',
+    anchorId: 'protecao',
   },
   {
-    n: '04',
-    ico: <Ico.Car />,
-    t: 'Resultado Final',
-    d: 'Brilho profundo e duradouro com proteção garantida por meses.',
+    number: '04',
+    icon: <Ico.Car />,
+    title: 'Resultado Final',
+    description: 'Brilho profundo e duradouro com proteção garantida por meses.',
   },
 ];
 
@@ -54,11 +57,11 @@ export function Services() {
 
         <div className="services stagger reveal">
           {SERVICE_ITEMS.map((it) => (
-            <div className="svc" key={it.n}>
-              <div className="svc-num">// {it.n}</div>
-              <div className="svc-ico">{it.ico}</div>
-              <h3>{it.t}</h3>
-              <p>{it.d}</p>
+            <div className="svc" key={it.number} id={it.anchorId}>
+              <div className="svc-num">// {it.number}</div>
+              <div className="svc-ico">{it.icon}</div>
+              <h3>{it.title}</h3>
+              <p>{it.description}</p>
               <div className="svc-line" />
             </div>
           ))}
@@ -69,4 +72,3 @@ export function Services() {
     </section>
   );
 }
-
