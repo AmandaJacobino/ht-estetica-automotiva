@@ -456,12 +456,8 @@ section {
   margin-bottom: 8px
 }
 
-/* Hide the container when no video source is present */
-.hero-video:not(:has(source)) {
-  display: none;
-}
-
-.hero-video video {
+.hero-video video,
+.hero-video img {
   width: 100%;
   height: 100%;
   object-fit: cover;

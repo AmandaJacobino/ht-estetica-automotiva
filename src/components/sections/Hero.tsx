@@ -1,6 +1,11 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
+/** Set to e.g. `/videos/hero.mp4` when the hero video asset is ready */
+const videoSrc: string | null = null;
+
+const HERO_POSTER = '/og-image.png';
+
 /** Hero section with headline, stats strip and media card */
 export function Hero() {
   return (
@@ -8,15 +13,25 @@ export function Hero() {
       <div className="container">
         <div className="hero-content">
           <div className="hero-video">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-hidden="true"
-            >
-              {/* Add <source src="/videos/hero.mp4" type="video/mp4" /> when the file is ready */}
-            </video>
+            {videoSrc ? (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster={HERO_POSTER}
+                preload="metadata"
+                aria-hidden="true"
+              >
+                <source src={videoSrc} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={HERO_POSTER}
+                alt=""
+                role="presentation"
+              />
+            )}
           </div>
 
           <h1 className="h1 title-font">
