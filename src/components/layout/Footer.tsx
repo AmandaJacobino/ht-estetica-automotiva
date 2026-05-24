@@ -26,7 +26,7 @@ export function Footer() {
               >
                 <Ico.Insta />
               </a>
-              <a href={waLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <a href={waLink()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <Ico.Whats />
               </a>
               <a href="mailto:tedescohenrique@hotmail.com" aria-label="Email">

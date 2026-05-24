@@ -18,7 +18,7 @@ export function Contact() {
             <div className="divider">CANAIS DIRETOS</div>
 
             {/* WhatsApp row */}
-            <a className="contact-row" href={waLink()} target="_blank" rel="noreferrer">
+            <a className="contact-row" href={waLink()} target="_blank" rel="noopener noreferrer">
               <div className="contact-ico wa"><Ico.Whats /></div>
               <div className="flex-1">
                 <div className="contact-lbl">WhatsApp</div>
