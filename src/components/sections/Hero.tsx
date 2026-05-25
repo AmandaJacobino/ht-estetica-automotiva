@@ -1,7 +1,7 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
-/** Set to e.g. `/videos/hero.mp4` when the hero video asset is ready */
+/** Set to e.g. `/videos/hero.mp4` */
 const videoSrc: string | null = null;
 
 const HERO_POSTER = '/og-image.png';
