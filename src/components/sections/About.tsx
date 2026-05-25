@@ -4,7 +4,7 @@ import { waLink } from '../../lib/whatsapp';
 /** About section — Henrique's story, certification card and CTAs */
 export function About() {
   return (
-    <section className="section" id="sobre" style={{ paddingTop: 0 }}>
+    <section className="section pt-0" id="sobre">
       <div className="container">
         <div className="about">
           {/* Left — media */}
@@ -12,37 +12,13 @@ export function About() {
             <div className="about-media">
               <div className="about-frame">
                 <div className="about-person">
-                  <div style={{ textAlign: 'center' }}>
-                    <div
-                      style={{
-                        width: 80,
-                        height: 80,
-                        borderRadius: '50%',
-                        margin: '0 auto 12px',
-                        background: 'linear-gradient(135deg,#ff6a1a,#d94e00)',
-                        display: 'grid',
-                        placeItems: 'center',
-                        fontFamily: 'Orbitron',
-                        fontWeight: 800,
-                        fontSize: 28,
-                        color: '#fff',
-                        boxShadow: '0 20px 40px -10px rgba(255,106,26,.5)',
-                      }}
-                    >
-                      HT
-                    </div>
-                    <div className="pmark">[ foto do Henrique ]</div>
+                  <div className="text-center">
+                    <div className="about-avatar title-font">HT</div>
                   </div>
                 </div>
               </div>
               <div className="cert-card">
-                <div className="cert-img-wrapper">
-                  <img
-                    src="https://placehold.co/400x300/2a1810/F25C05?text=Certificado+Profissional"
-                    alt="Certificado Profissional"
-                    className="cert-img-element"
-                  />
-                </div>
+                <div className="cert-img-wrapper" aria-hidden="true" />
                 <div className="cert-label">Certificado Profissional</div>
               </div>
             </div>
@@ -51,7 +27,7 @@ export function About() {
           {/* Right — text */}
           <div className="reveal">
             <div className="sec-eyebrow">Quem está por trás</div>
-            <h2 className="title-font">
+            <h2 className="sec-title title-font">
               Mais do que polir, é <span className="o">restaurar a história</span>.
             </h2>
             <div className="about-text">
@@ -73,17 +49,17 @@ export function About() {
             <div className="about-quote">
               Aqui, o seu carro não é "mais um". Ele é o mais importante.
             </div>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <div className="flex flex-wrap gap-3">
               <a
                 className="btn btn-primary"
                 href={waLink('Olá Henrique, quero solicitar um orçamento.')}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
-                <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar orçamento
+                <Ico.Whats size={16} /> Solicitar orçamento
               </a>
               <a className="btn btn-ghost" href="#servicos">
-                Ver serviços <Ico.Arrow style={{ width: 16, height: 16 }} />
+                Ver serviços <Ico.Arrow size={16} />
               </a>
             </div>
           </div>

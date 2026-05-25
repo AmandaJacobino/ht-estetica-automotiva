@@ -16,16 +16,21 @@ function App() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Pular para o conteúdo
+      </a>
       <Atmosphere />
       <div className="wrap">
         <Nav />
-        <Hero />
-        <Services />
-        <About />
-        <Packages />
-        <Testimonials />
-        <Faq />
-        <Contact />
+        <main id="main-content">
+          <Hero />
+          <Services />
+          <About />
+          <Packages />
+          <Testimonials />
+          <Faq />
+          <Contact />
+        </main>
         <Footer />
       </div>
       <FloatingWhatsApp />

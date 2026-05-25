@@ -1,7 +1,25 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(Remove-Item *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'security: add noopener to all target=blank links and delete orphaned app.jsx *)",
+      "Bash(git commit -m 'fix: Nav import order, BeforeAfter stale closure, useBeforeAfter unmount leak, Testimonials key *)",
+      "Bash(git commit -m 'a11y: accessible FAQ accordion, main landmark, footer heading hierarchy, decorative aria-hidden *)",
+      "Bash(git commit -m 'a11y: add :focus-visible ring and prefers-reduced-motion support *)",
+      "Bash(git commit -m 'style: remove dead CSS, fix text-align, transition:all, placeholder content *)",
+      "Bash(git commit -m 'style: replace hardcoded orange rgba with design tokens, fix Orbitron bypasses *)",
+      "Bash(git commit -m 'seo: add Open Graph, Twitter Card, canonical, JSON-LD; trim unused Google Fonts *)",
+      "Bash(git commit -m 'refactor: extract SectionHeader component, deduplicate NAV_LINKS *)",
+      "Bash(git commit -m 'chore: update CLAUDE.md to reflect actual codebase state *)",
+      "Bash(git commit -m 'feat\\(hero\\): add video container above headline *)",
+      "Bash(npm run *)",
+      "Bash(npm audit *)",
+      "Bash(ls -la \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\\\\.github\")",
+      "Bash(ls -la \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\\\\.husky\")",
+      "Bash(ls -la \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\\\\.vscode\")",
+      "Bash(npm outdated *)"
     ]
   }
 }

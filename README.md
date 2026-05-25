@@ -89,16 +89,6 @@ src/
 ├── main.tsx               # Entry point
 └── index.css              # Estilos globais
 ```
-
-## 🎨 Customização
-
-O projeto possui um **painel de ajustes** (TweaksPanel) que permite modificar cores e estilos em tempo real:
-
-- Acione o painel via mensagem postMessage com tipo `__activate_edit_mode`
-- Modifique cores através da UI interativa
-- As mudanças aplicam CSS custom properties dinamicamente
-- Estado pode ser salvo via `window.TWEAKS`
-
 ## 📱 Recursos Principais
 
 ### Animações
@@ -133,19 +123,8 @@ Atualmente o projeto não requer variáveis de ambiente, mas está pronto para i
 - Analytics
 - CMS
 
-## 🤝 Contribuindo
-
-Para fazer alterações:
-1. Crie uma branch
-2. Faça suas modificações
-3. Teste localmente com `npm run dev`
-4. Faça o build com `npm run build`
-5. Commit e push
-
 ## 📄 Licença
 
 Propriedade da HT Estética Automotiva
 
 ---
-
-

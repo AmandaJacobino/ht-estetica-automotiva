@@ -20,25 +20,25 @@ export function BeforeAfter() {
   const [idx, setIdx] = useState(0);
   const { pos, ref, handleDragStart } = useBeforeAfter(50);
   const total = BA_SLIDES.length;
-  const cur = BA_SLIDES[idx];
+  const cur = BA_SLIDES[idx % total]!;
 
   const goTo = (i: number) => setIdx(i);
   const goPrev = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIdx((idx - 1 + total) % total);
+    setIdx((i) => (i - 1 + total) % total);
   };
   const goNext = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIdx((idx + 1) % total);
+    setIdx((i) => (i + 1) % total);
   };
 
   return (
-    <div className="reveal" style={{ marginTop: 80 }}>
+    <div className="reveal mt-20">
       {/* Divider row */}
-      <div className="divider" style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+      <div className="divider flex items-center gap-4">
         <span>ANTES × DEPOIS / Arraste para comparar</span>
-        <span style={{ flex: 1, height: 1, background: 'linear-gradient(90deg,var(--line),transparent)' }} />
-        <span style={{ fontFamily: "'JetBrains Mono',monospace", color: 'var(--orange)' }}>
+        <span className="flex-1 h-px" style={{ background: 'linear-gradient(90deg,var(--line),transparent)' }} />
+        <span className="ba-index">
           {String(idx + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
         </span>
       </div>
@@ -57,7 +57,12 @@ export function BeforeAfter() {
 
         {/* After layer */}
         <div className="ba-layer ba-after" style={{ clipPath: `inset(0 0 0 ${pos}%)` }}>
-          <div className="ba-shine-text" style={{ color: 'rgba(242,92,5,.2)' }}>{cur.after}</div>
+          <div
+            className="ba-shine-text"
+            style={{ color: 'rgba(var(--orange-rgb), 0.2)' }}
+          >
+            {cur.after}
+          </div>
         </div>
 
         {/* Labels */}
@@ -66,7 +71,7 @@ export function BeforeAfter() {
 
         {/* Caption */}
         <div className="ba-caption">
-          <div className="ba-cap-title">{cur.label}</div>
+          <div className="ba-cap-title title-font">{cur.label}</div>
           <div className="ba-cap-sub">{cur.car}</div>
         </div>
 
@@ -79,12 +84,12 @@ export function BeforeAfter() {
         </div>
 
         {/* Navigation arrows */}
-        <button className="ba-nav prev" onClick={goPrev} aria-label="Anterior">
+        <button type="button" className="ba-nav prev" onClick={goPrev} aria-label="Anterior">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 6l-6 6 6 6" />
           </svg>
         </button>
-        <button className="ba-nav next" onClick={goNext} aria-label="Próximo">
+        <button type="button" className="ba-nav next" onClick={goNext} aria-label="Próximo">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 6l6 6-6 6" />
           </svg>
@@ -95,6 +100,7 @@ export function BeforeAfter() {
       <div className="ba-dots">
         {BA_SLIDES.map((_, i) => (
           <button
+            type="button"
             key={i}
             className={`ba-dot ${i === idx ? 'on' : ''}`}
             onClick={() => goTo(i)}

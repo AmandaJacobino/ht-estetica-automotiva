@@ -7,9 +7,9 @@ export function FloatingWhatsApp() {
     <a
       href={waLink()}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="float-wa"
-      aria-label="WhatsApp"
+      aria-label="Conversar no WhatsApp"
     >
       <Ico.Whats />
     </a>

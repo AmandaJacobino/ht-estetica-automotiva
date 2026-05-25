@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { BrandWordmark } from '../ui/BrandWordmark';
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
@@ -10,6 +12,8 @@ const NAV_LINKS = [
   { href: '#contato', label: 'Contato' },
 ];
 
+export { NAV_LINKS };
+
 interface MobileMenuProps {
   open: boolean;
   onClose: () => void;
@@ -18,7 +22,12 @@ interface MobileMenuProps {
 /** Full-screen mobile navigation overlay */
 function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (
-    <div className={`mobile-menu ${open ? 'open' : ''}`}>
+    <nav
+      id="mobile-nav"
+      className={`mobile-menu ${open ? 'open' : ''}`}
+      aria-label="Navegação mobile"
+      {...(!open ? { inert: '' } : {})}
+    >
       {NAV_LINKS.map((l) => (
         <a key={l.href} href={l.href} onClick={onClose}>
           {l.label}
@@ -28,23 +37,23 @@ function MobileMenu({ open, onClose }: MobileMenuProps) {
         <a
           href={waLink()}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="btn btn-primary"
           style={{ width: '100%', justifyContent: 'center' }}
         >
-          <Ico.Whats style={{ width: 16, height: 16 }} /> Solicitar Orçamento
+          <Ico.Whats size={16} /> Solicitar Orçamento
         </a>
       </div>
-    </div>
+    </nav>
   );
 }
 
 /** Sticky top navigation bar with desktop links and mobile burger menu */
 export function Nav() {
-  const [open, setOpen] = React.useState(false);
-  const [active, setActive] = React.useState<string>('inicio');
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string>('inicio');
 
-  React.useEffect(() => {
+  useEffect(() => {
     const ids = NAV_LINKS.map((l) => l.href.slice(1));
     const sections = ids
       .map((id) => document.getElementById(id))
@@ -59,8 +68,8 @@ export function Nav() {
           else visible.delete(e.target.id);
         }
         if (visible.size > 0) {
-          const top = [...visible.entries()].sort((a, b) => b[1] - a[1])[0][0];
-          setActive(top);
+          const topEntry = [...visible.entries()].sort((a, b) => b[1] - a[1])[0];
+          if (topEntry) setActive(topEntry[0]);
         }
       },
       { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
@@ -70,16 +79,30 @@ export function Nav() {
     return () => io.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open]);
+
   return (
     <>
-      <nav className="nav">
-        <div className="container nav-inner">
+      <header>
+        <nav className="nav" aria-label="Principal">
+          <div className="container nav-inner">
           <div className="logo">
-            <div className="logo-text" style={{ fontSize: 15 }}>
-              <span className="or">HT</span>{' '}
-              <span className="bl">Estética</span>{' '}
-              <span className="or">Automotiva</span>
-            </div>
+            <BrandWordmark className="logo-text" />
           </div>
           <div className="nav-links">
             {NAV_LINKS.map((l) => {
@@ -99,26 +122,27 @@ export function Nav() {
             <a
               href={waLink()}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="nav-cta"
             >
-              <Ico.Whats style={{ width: 14, height: 14 }} /> Orçamento
+              <Ico.Whats size={14} /> Orçamento
             </a>
           </div>
           <button
+            type="button"
             id="nav-burger"
             className="burger"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Abrir menu"
+            aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
           >
             {open ? <Ico.Close /> : <Ico.Menu />}
           </button>
-        </div>
-      </nav>
+          </div>
+        </nav>
+      </header>
       <MobileMenu open={open} onClose={() => setOpen(false)} />
     </>
   );
 }
-
-// React needs to be in scope for JSX in older setups; import it explicitly.
-import React from 'react';

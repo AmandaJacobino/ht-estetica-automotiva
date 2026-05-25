@@ -1,4 +1,5 @@
 import { Ico } from '../ui/Icons';
+import { SectionHeader } from '../ui/SectionHeader';
 
 interface Testimonial {
   name: string;
@@ -20,23 +21,17 @@ export function Testimonials() {
   return (
     <section className="section" id="depoimentos">
       <div className="container">
-        <div className="reveal" style={{ textAlign: 'center' }}>
-          <div className="sec-eyebrow" style={{ display: 'inline-flex', justifyContent: 'center' }}>
-            Depoimentos
-          </div>
-          <h2 className="sec-title title-font">
-            O que nossos <span className="o">clientes dizem</span>
-          </h2>
-          <p className="sec-sub" style={{ margin: '0 auto' }}>
-            Avaliações reais de quem já confiou o carro com a gente.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Depoimentos"
+          title={<>O que nossos <span className="o">clientes dizem</span></>}
+          subtitle="Avaliações reais de quem já confiou o carro com a gente."
+        />
 
         <div className="testis reveal">
-          {TESTIMONIALS.map((t, i) => (
-            <div className="testi" key={i}>
+          {TESTIMONIALS.map((t) => (
+            <div className="testi" key={t.name}>
               <div className="testi-quote">"</div>
-              <div className="testi-stars">
+              <div className="testi-stars" aria-label="5 out of 5 stars">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Ico.Star key={j} />
                 ))}
