@@ -6,13 +6,27 @@ interface Slide {
   before: string;
   after: string;
   car: string;
+  beforeSrc?: string;
+  afterSrc?: string;
 }
 
 const BA_SLIDES: Slide[] = [
-  { label: 'Polimento completo',     before: 'OPACO',     after: 'BRILHO',    car: 'Honda Civic — preto' },
-  { label: 'Correção de riscos',     before: 'ARRANHADO', after: 'ESPELHADO', car: 'VW Jetta — prata' },
-  { label: 'Vitrificação',           before: 'FOSCO',     after: 'CRISTAL',   car: 'Toyota Corolla — branco' },
-  { label: 'Revitalização de faróis', before: 'AMARELADO', after: 'NOVO',     car: 'Chevrolet Onix' },
+  {
+    label: 'Revitalização de faróis',
+    before: 'AMARELADO',
+    after: 'NOVO',
+    car: 'Farol — antes e depois',
+    beforeSrc: '/assets/images/before-farol-1.jpg',
+    afterSrc: '/assets/images/after-farol-1.jpg',
+  },
+  {
+    label: 'Revitalização de faróis',
+    before: 'OPACO',
+    after: 'CRISTALINO',
+    car: 'Farol — antes e depois',
+    beforeSrc: '/assets/images/before-farol-2.jpeg',
+    afterSrc: '/assets/images/after-farol-2.jpeg',
+  },
 ];
 
 /** Draggable before/after comparison slider with slide carousel */
@@ -52,17 +66,35 @@ export function BeforeAfter() {
       >
         {/* Before layer */}
         <div className="ba-layer ba-before">
-          <div className="ba-shine-text">{cur.before}</div>
+          {cur.beforeSrc ? (
+            <img
+              src={cur.beforeSrc}
+              alt={`Antes — ${cur.label}`}
+              draggable={false}
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          ) : (
+            <div className="ba-shine-text">{cur.before}</div>
+          )}
         </div>
 
         {/* After layer */}
         <div className="ba-layer ba-after" style={{ clipPath: `inset(0 0 0 ${pos}%)` }}>
-          <div
-            className="ba-shine-text"
-            style={{ color: 'rgba(var(--orange-rgb), 0.2)' }}
-          >
-            {cur.after}
-          </div>
+          {cur.afterSrc ? (
+            <img
+              src={cur.afterSrc}
+              alt={`Depois — ${cur.label}`}
+              draggable={false}
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          ) : (
+            <div
+              className="ba-shine-text"
+              style={{ color: 'rgba(var(--orange-rgb), 0.2)' }}
+            >
+              {cur.after}
+            </div>
+          )}
         </div>
 
         {/* Labels */}

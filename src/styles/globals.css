@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted fonts — Inter 400 & Teko 700 (latin + latin-ext) */
+/* Self-hosted fonts â€” Inter 400 & Teko 700 (latin + latin-ext) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -73,7 +73,7 @@
   -webkit-tap-highlight-color: transparent
 }
 
-/* Skip link — visually hidden until keyboard focus */
+/* Skip link â€” visually hidden until keyboard focus */
 .skip-link {
   position: absolute;
   width: 1px;
@@ -108,7 +108,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, .45);
 }
 
-/* Global focus-visible ring — visible only for keyboard navigation */
+/* Global focus-visible ring â€” visible only for keyboard navigation */
 *:focus {
   outline: none;
 }
@@ -172,7 +172,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Title font — driven by tweak */
+/* Title font â€” driven by tweak */
 .title-font {
   font-family: var(--title-font, 'Teko'), 'Inter', sans-serif;
   letter-spacing: var(--title-tracking, 0.02em);
@@ -315,8 +315,7 @@ section {
 }
 
 .logo-text {
-  font-size: 15px
-}
+  font-size: 18px}
 
 .logo-text .or {
   background: var(--orange-grad);
@@ -450,8 +449,27 @@ section {
 
 /* Hero */
 .hero {
-  padding: 56px 0 40px;
-  position: relative
+  padding: 96px 0 80px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .hero-eyebrow {
@@ -491,12 +509,14 @@ section {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 24px;
-  margin-top: 28px
+  margin-top: 0
 }
 
 @media (max-width:960px) {
@@ -505,16 +525,16 @@ section {
   }
 }
 
-/* Video container — sits right above the title */
+/* Full-bleed background video filling the hero section */
 .hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 720px;
-  aspect-ratio: 16/9;
-  border-radius: 18px;
+  height: 100%;
   overflow: hidden;
-  background: linear-gradient(160deg, var(--bg-2), var(--bg-1));
-  border: 1px solid var(--line-strong);
-  margin-bottom: 8px
+  background: var(--bg-1);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-video video,
@@ -587,7 +607,7 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+  background: var(--orange-grad);
   color: #fff;
   box-shadow: 0 12px 36px -12px rgba(var(--orange-rgb), .75), inset 0 1px 0 rgba(255, 255, 255, .22);
 }
@@ -976,7 +996,7 @@ section {
   letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   color: #fff;
 }
 
@@ -1070,7 +1090,7 @@ section {
 }
 
 .wash.featured .wash-btn {
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   border-color: transparent;
   color: #fff;
   box-shadow: 0 10px 30px -12px rgba(var(--orange-rgb), .6);
@@ -1149,7 +1169,7 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   display: grid;
   place-items: center;
   font-family: 'Teko', sans-serif;
@@ -1428,7 +1448,7 @@ footer {
 
 .foot-brand {
   font-family: 'Teko', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: .06em;
   margin-bottom: 14px
@@ -1575,8 +1595,7 @@ footer {
 .cta-band p {
   color: var(--fg-dim);
   margin: 6px 0 0;
-  font-size: 15px
-}
+  font-size: 18px}
 
 /* Before/after slider */
 .ba {
@@ -1655,7 +1674,7 @@ footer {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   display: grid;
   place-items: center;
   box-shadow: 0 12px 30px -8px rgba(var(--orange-rgb), .7);
