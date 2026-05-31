@@ -27,7 +27,9 @@ const BA_SLIDES: Slide[] = [
     beforeSrc: '/assets/images/before-farol-2.jpeg',
     afterSrc: '/assets/images/after-farol-2.jpeg',
   },
+  // TODO: add image — no before/after photos available for this slide yet
   { label: 'Polimento completo',     before: 'OPACO',     after: 'BRILHO',    car: 'Honda Civic — preto' },
+  // TODO: add image — no before/after photos available for this slide yet
   { label: 'Correção de riscos',     before: 'ARRANHADO', after: 'ESPELHADO', car: 'VW Jetta — prata' },
 ];
 
