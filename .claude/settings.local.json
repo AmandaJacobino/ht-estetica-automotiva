@@ -19,7 +19,18 @@
       "Bash(ls -la \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\\\\.github\")",
       "Bash(ls -la \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\\\\.husky\")",
       "Bash(ls -la \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\\\\.vscode\")",
-      "Bash(npm outdated *)"
+      "Bash(npm outdated *)",
+      "Bash(git check-ignore *)",
+      "Bash(dir *)",
+      "Bash(npm install *)",
+      "Bash(cd C:\\\\\\\\Users\\\\\\\\Amanda\\\\\\\\projetos\\\\\\\\ht-estetica-automotiva)",
+      "PowerShell(ls -Path \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\" -Force | Where-Object { $_.Name -match \"^\\\\.\" -and $_.PSIsContainer } | Select-Object -ExpandProperty Name)",
+      "PowerShell(cd \"C:\\\\Users\\\\Amanda\\\\projetos\\\\ht-estetica-automotiva\"; ls -Path \".\" -Force | Where-Object { -not $_.PSIsContainer } | Select-Object -ExpandProperty Name)",
+      "Bash(python *)",
+      "Bash(git commit *)",
+      "Bash(powershell *)",
+      "Bash(bash -c *)",
+      "Bash(curl -s http://localhost:5174)"
     ]
   }
 }
