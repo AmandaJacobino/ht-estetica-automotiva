@@ -587,7 +587,7 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-deep) 100%);
+  background: var(--orange-grad);
   color: #fff;
   box-shadow: 0 12px 36px -12px rgba(var(--orange-rgb), .75), inset 0 1px 0 rgba(255, 255, 255, .22);
 }
@@ -976,7 +976,7 @@ section {
   letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   color: #fff;
 }
 
@@ -1070,7 +1070,7 @@ section {
 }
 
 .wash.featured .wash-btn {
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   border-color: transparent;
   color: #fff;
   box-shadow: 0 10px 30px -12px rgba(var(--orange-rgb), .6);
@@ -1149,7 +1149,7 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   display: grid;
   place-items: center;
   font-family: 'Teko', sans-serif;
@@ -1655,7 +1655,7 @@ footer {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+  background: var(--orange-grad);
   display: grid;
   place-items: center;
   box-shadow: 0 12px 30px -8px rgba(var(--orange-rgb), .7);
