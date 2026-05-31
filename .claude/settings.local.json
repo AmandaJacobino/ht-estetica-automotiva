@@ -30,7 +30,9 @@
       "Bash(git commit *)",
       "Bash(powershell *)",
       "Bash(bash -c *)",
-      "Bash(curl -s http://localhost:5174)"
+      "Bash(curl -s http://localhost:5174)",
+      "Bash(r)",
+      "Bash(node /tmp/fix.cjs)"
     ]
   }
 }
