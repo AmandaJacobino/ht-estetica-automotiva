@@ -1,8 +1,8 @@
 import { Ico } from '../ui/Icons';
 import { waLink } from '../../lib/whatsapp';
 
-/** Set to e.g. `/videos/hero.mp4` */
-const videoSrc: string | null = null;
+/** Hero background video (placed under public/assets/video/) */
+const videoSrc: string | null = '/assets/video/hero-video.mp4';
 
 const HERO_POSTER = '/og-image.png';
 
