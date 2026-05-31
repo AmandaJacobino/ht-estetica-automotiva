@@ -6,34 +6,34 @@ const videoSrc: string | null = '/assets/video/hero-video.mp4';
 
 const HERO_POSTER = '/og-image.png';
 
-/** Hero section with headline, stats strip and media card */
+/** Hero section with full-bleed background video, headline and CTAs */
 export function Hero() {
   return (
     <section className="hero" id="inicio">
+      <div className="hero-video" aria-hidden="true">
+        {videoSrc ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={HERO_POSTER}
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={HERO_POSTER}
+            alt=""
+            role="presentation"
+          />
+        )}
+      </div>
+
       <div className="container">
         <div className="hero-content">
-          <div className="hero-video">
-            {videoSrc ? (
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster={HERO_POSTER}
-                preload="metadata"
-                aria-hidden="true"
-              >
-                <source src={videoSrc} type="video/mp4" />
-              </video>
-            ) : (
-              <img
-                src={HERO_POSTER}
-                alt=""
-                role="presentation"
-              />
-            )}
-          </div>
-
           <h1 className="h1 title-font">
             Cuide do <span className="accent">chega</span> antes de{' '}
             <span className="stroke">você</span>
