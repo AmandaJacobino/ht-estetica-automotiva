@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted fonts — Inter 400 & Teko 700 (latin + latin-ext) */
+/* Self-hosted fonts â€” Inter 400 & Teko 700 (latin + latin-ext) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -73,7 +73,7 @@
   -webkit-tap-highlight-color: transparent
 }
 
-/* Skip link — visually hidden until keyboard focus */
+/* Skip link â€” visually hidden until keyboard focus */
 .skip-link {
   position: absolute;
   width: 1px;
@@ -108,7 +108,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, .45);
 }
 
-/* Global focus-visible ring — visible only for keyboard navigation */
+/* Global focus-visible ring â€” visible only for keyboard navigation */
 *:focus {
   outline: none;
 }
@@ -172,7 +172,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Title font — driven by tweak */
+/* Title font â€” driven by tweak */
 .title-font {
   font-family: var(--title-font, 'Teko'), 'Inter', sans-serif;
   letter-spacing: var(--title-tracking, 0.02em);
@@ -315,8 +315,7 @@ section {
 }
 
 .logo-text {
-  font-size: 15px
-}
+  font-size: 18px}
 
 .logo-text .or {
   background: var(--orange-grad);
@@ -505,7 +504,7 @@ section {
   }
 }
 
-/* Video container — sits right above the title */
+/* Video container â€” sits right above the title */
 .hero-video {
   width: 100%;
   max-width: 720px;
@@ -1428,7 +1427,7 @@ footer {
 
 .foot-brand {
   font-family: 'Teko', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: .06em;
   margin-bottom: 14px
@@ -1575,8 +1574,7 @@ footer {
 .cta-band p {
   color: var(--fg-dim);
   margin: 6px 0 0;
-  font-size: 15px
-}
+  font-size: 18px}
 
 /* Before/after slider */
 .ba {
